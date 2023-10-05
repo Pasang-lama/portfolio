@@ -1,0 +1,42 @@
+.hero-banner {
+  height: 100vh;
+  @include background-property;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(28 27 27 / 81%);
+    z-index: 1;
+  }
+  .banner-text {
+    @include center;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    h1 {
+      font-size: 56px !important;
+      letter-spacing: 2px;
+      font-weight: 700;
+      span {
+        color: $secondary-color;
+      }
+    }
+    .animated-text{
+      font-size: 24px;
+      letter-spacing: 1px;
+      line-height: 32px;
+      .typingText{
+        font-weight: 700;
+        padding-bottom:3px;
+        border-bottom: 3px solid $secondary-color;
+      }
+    }
+  }
+}
+.landing-page-wrapper{
+  @include background-property;
+}

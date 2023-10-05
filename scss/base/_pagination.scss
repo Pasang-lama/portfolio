@@ -1,0 +1,44 @@
+.pagination-wrapper {
+  .pagination {
+    margin-top: 50px !important;
+    justify-content: flex-end !important;
+    .page-item {
+      margin-left: 10px !important;
+      &:first-child {
+        margin-left: 0px !important;
+      }
+      .page-link {
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: $secondary-color !important;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        border: 1px solid $primary-color !important;
+        text-align: center;
+        @include flex-center;
+        &:hover {
+          background-color: $primary-color !important;
+          border: 1px solid $primary-color !important;
+          color: white !important;
+        }
+        &:focus {
+          z-index: 3;
+          background-color: transparent !important;
+          outline: 0;
+          color: white !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+    .active {
+      .page-link {
+        background-color: $primary-color !important;
+        border: 1px solid $primary-color !important;
+        color: white !important;
+      }
+    }
+  }
+}

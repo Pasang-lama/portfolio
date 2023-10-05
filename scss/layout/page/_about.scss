@@ -1,0 +1,100 @@
+.about-me-content-wrapper {
+  .digital-signature {
+    figure {
+      margin-top: 40px !important;
+      width: 300px;
+      height: fit-content;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+.personal-information {
+  ul {
+    li {
+      font-size: 16px;
+      display: block;
+      padding-bottom: 7px;
+      font-family: "Roboto", sans-serif !important;
+      color: #555;
+      &:last-child {
+        padding-bottom: 0px;
+      }
+      span {
+        font-family: $font-family;
+        margin-right: 10px;
+        padding-bottom: 2px;
+        color: #222;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+.service-section {
+  .service-card {
+    .icon {
+      text-align: center;
+      margin-bottom: 10px;
+      i {
+        font-size: 50px;
+        color: $secondary-color;
+      }
+    }
+    .service-tittle{
+      font-size: 18px !important;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px !important;
+    color: #222;
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
+.Client-section{
+  .client-card{
+    figure{
+      height: 100px;
+      width: 100%;
+      img{
+        object-fit: contain !important;
+      }
+    }
+  }
+}
+.testimonals-cards{
+  border-radius: 10px;
+  background-color: #d1e4ec;
+  padding: 30px;
+  margin: 10px;
+  .fa-quote-left{
+    font-size: 30px;
+    display: block;
+    color: $secondary-color;
+    margin-bottom: 10px;
+  }
+  .review-des{
+    @include d-flex;
+    margin-top: 20px;
+    gap: 10px;
+    figure{
+      height: 80px;
+      width: 80px;
+      border-radius: 5px;
+    }
+    .des{
+      .name{
+        font-size: 16px !important;
+        color: #222;
+      }
+      span{
+        font-size: 14px;
+      }
+    }
+  }
+
+}

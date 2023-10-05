@@ -1,0 +1,42 @@
+@import "variable";
+
+.custom-buttons {
+  a,
+  button {
+    font-family: $font-family;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: $secondary-color !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid $secondary-color !important;
+    border-image: initial;
+    padding: 8px 20px;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "";
+      width: 30%;
+      height: 100%;
+      top: 0px;
+      left: 35%;
+      background-color: $secondary-color !important;
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.3s ease 0s;
+    }
+    &:hover{
+      color: white !important;
+      &::after{
+        opacity: 1;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
