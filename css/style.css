@@ -577,6 +577,189 @@ a {
   background-size: cover;
 }
 
+.resume-section ul.education {
+  margin: 20px 0 50px;
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 50px;
+  width: 100%;
+}
+.resume-section ul.education li {
+  position: relative;
+  margin-left: 10px;
+  padding: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.resume-section ul.education li:not(:first-child) {
+  margin-top: 60px;
+}
+.resume-section ul.education li span.line-left {
+  width: 2px;
+  height: 100%;
+  background-color: #555;
+  left: -10px;
+  top: 0;
+  position: absolute;
+}
+.resume-section ul.education li span.line-left:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  position: absolute;
+  left: -4px;
+  top: -10px;
+}
+.resume-section ul.education li span.line-left:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  position: absolute;
+  left: -4px;
+  top: -10px;
+  top: 100%;
+}
+.resume-section ul.experience {
+  margin: 20px 0 50px;
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 50px;
+  width: 100%;
+}
+.resume-section ul.experience li {
+  position: relative;
+  margin-left: 10px;
+  padding: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.resume-section ul.experience li:not(:first-child) {
+  margin-top: 60px;
+}
+.resume-section ul.experience li span.line-left {
+  width: 2px;
+  height: 100%;
+  background-color: #555;
+  left: -10px;
+  top: 0;
+  position: absolute;
+}
+.resume-section ul.experience li span.line-left:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  position: absolute;
+  left: -4px;
+  top: -10px;
+}
+.resume-section ul.experience li span.line-left:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  position: absolute;
+  left: -4px;
+  top: -10px;
+  top: 100%;
+}
+.resume-section .education .content {
+  margin-left: 10px;
+}
+.resume-section .education .content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.resume-section .education .content h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.resume-section .education .content p.info {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.resume-section .education span.year {
+  height: 100%;
+  left: -10px;
+  top: 0;
+  position: absolute;
+}
+.resume-section .education span.year span {
+  font-size: 16px;
+  position: absolute;
+  -webkit-transform: translateX(-120%);
+  transform: translateX(-120%);
+  color: #222;
+}
+.resume-section .education span.year span.to {
+  top: -18px;
+}
+.resume-section .education span.year span.from {
+  bottom: -18px;
+}
+.resume-section .experience .content {
+  margin-left: 10px;
+}
+.resume-section .experience .content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.resume-section .experience .content h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.resume-section .experience .content p.info {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.resume-section .experience span.year {
+  height: 100%;
+  left: -10px;
+  top: 0;
+  position: absolute;
+}
+.resume-section .experience span.year span {
+  font-size: 16px;
+  position: absolute;
+  -webkit-transform: translateX(-120%);
+  transform: translateX(-120%);
+  color: #222;
+}
+.resume-section .experience span.year span.to {
+  top: -18px;
+}
+.resume-section .experience span.year span.from {
+  bottom: -18px;
+}
+.resume-section .skills {
+  margin-bottom: 30px;
+}
+.resume-section .skills .skill-item {
+  padding: 0 20px;
+}
+
 .about-me-content-wrapper .digital-signature figure {
   margin-top: 40px !important;
   width: 300px;
