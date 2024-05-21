@@ -111,7 +111,7 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="https://mahamudratravels.com.np/" target="_blank">
-                                        <img src="images/mahamudralogo.png" alt="Mahamudra Tours and Travels" height="54" width="96">
+                                        <img src="images/mahamudralogo.png" alt="Mahamudra Tours and Travels" height="90" >
                                     </a>
                                 </figure>
                             </div>
@@ -121,7 +121,7 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="https://moonanddragonbuilder.com/" target="_blank">
-                                        <img src="images/moonanddragonbuilder.png" alt="Moon and Dragon Builder Pvt. Ltd." height="54" width="96">
+                                        <img src="images/moonanddragonbuilder.png" alt="Moon and Dragon Builder Pvt. Ltd." height="90" >
                                     </a>
                                 </figure>
                             </div>
@@ -130,7 +130,7 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="https://tashipalhotel.com/" target="_blank">
-                                        <img src="images/tashipal-hotel-logo.jpeg" alt="Tashi Pal Hotel Pvt. Ltd." height="54" width="96">
+                                        <img src="images/tashipal-hotel-logo.png" alt="Tashi Pal Hotel Pvt. Ltd." height="90" >
                                     </a>
                                 </figure>
                             </div>
@@ -139,7 +139,7 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="#" >
-                                        <img src="images/nepal-buddhist-peace-society.png" alt="Nepal Buddhist Peace Society" height="54" width="96">
+                                        <img src="images/nepal-buddhist-peace-society.png" alt="Nepal Buddhist Peace Society" height="90" >
                                     </a>
                                 </figure>
                             </div>

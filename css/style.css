@@ -610,10 +610,10 @@ a {
   text-align: center; }
 
 .Client-section .client-card figure {
-  height: 100px;
+  height: 120px;
   background-color: white;
   box-shadow: 0px 0px 7px 1px #e9e7e7;
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 5px; }
   .Client-section .client-card figure img {
     object-fit: contain !important; }
