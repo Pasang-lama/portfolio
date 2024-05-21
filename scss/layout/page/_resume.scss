@@ -1,0 +1,156 @@
+.resume-section {
+  ul.experience {
+    margin: 20px 0 50px 90px !important;
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 50px;
+    width: calc(100% - 90px);
+    li {
+      position: relative;
+      margin-left: 10px;
+      padding: 5px 10px;
+      transition: all 0.5s ease-in-out;
+      display: block;
+      &:not(:first-child) {
+        margin-top: 60px;
+      }
+      .line-left {
+        width: 2px;
+        height: 100%;
+        background-color: $secondary-color;
+        left: -10px;
+        top: 0;
+        position: absolute;
+        &::before,
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $secondary-color;
+          position: absolute;
+          left: -4px;
+        }
+        &::before {
+          top: -10px;
+        }
+        &::after {
+          top: 100%;
+        }
+      }
+      .content {
+        margin-left: 10px;
+        h3 {
+          font-size: 16px !important;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          line-height: 26px;
+          margin: 0 !important;
+        }
+        .company {
+          margin-block: 3px;
+          font-size: 14px;
+          font-weight: 600;
+          color: $secondary-color;
+          span {
+            color: #8e8e8e;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 400;
+          }
+        }
+        p.info {
+          font-size: 16px;
+          margin-bottom: 0px;
+        }
+      }
+      .year {
+        height: 100%;
+        left: -20px;
+        top: 0;
+        position: absolute;
+        time {
+          font-size: 14px;
+          position: absolute;
+          transform: translateX(-100%);
+          white-space: nowrap;
+          color: #8e8e8e;
+        }
+        .to {
+          top: -18px;
+        }
+        .from {
+          bottom: -14px;
+        }
+      }
+    }
+  }
+}
+.experence-wrapper {
+  background-color: white;
+  box-shadow: 0px 0px 7px 1px #e9e7e7;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.progress-bar-wrapper {
+  .progress-bar{
+    margin: 0 0 10px;
+	background-color: transparent !important;
+	padding-right: 24px;
+    .progress-title-holder {
+      padding-bottom: 7px;
+      position: relative;
+      margin: 5px 0;
+      .progress-title {
+       text-align: left;
+	   font-size: 18px;
+	   line-height: 18px;
+	   font-weight: 600;
+	   color: #555;
+      }
+      .progress-number-wrapper {
+        width: 100%;
+        z-index: 10;
+        .progress-number-mark {
+          margin-bottom: 4px;
+          border-radius: 3px;
+          background-color: $secondary-color;
+          padding: 0 8px;
+          position: absolute;
+          bottom: 0;
+          transform: translateX(-50%);
+          .down-arrow {
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-top: 3px solid $secondary-color;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      .progress-number-wrapper,
+      .progress-number-mark {
+        font-size: 11px;
+        line-height: 24px;
+        height: 24px;
+        letter-spacing: 0px;
+        font-weight: 600;
+        font-style: normal;
+        text-transform: none;
+        color: #ffffff;
+      }
+    }
+    .progress-content-outter {
+      height: 8px;
+      background-color: #c4c4c4;
+      .progress-content {
+        height: 21px;
+        background-color: $secondary-color;
+        width: 0%;
+      }
+    }
+  }
+}

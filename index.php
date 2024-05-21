@@ -17,4 +17,22 @@
         </div>
     </div>
 </div>
+<!-- typing animation  -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/typed.min.js"></script>
+<script>
+var typing = new Typed(".typingText", {
+  strings: [
+    "",
+    "PHP Laravel Developer",
+    "Freelancer",
+    "Web Designer",
+    "UI-UX Designer",
+    "WordPress Designer",
+  ],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+});
+</script>
 <?php include('includes/footer.php');?>

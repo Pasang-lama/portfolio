@@ -20,7 +20,5 @@
     <link rel="stylesheet" href="css/fancybox.css" />
     <!-- magnific-popup css  -->
     <link rel="stylesheet" href="css/magnific-popup.css" />
-    <!-- jquery timeline plugin css  -->
-    <link rel="stylesheet" href="css/horizontal_timeline.2.0.min.css" />
 </head>
 <body>

@@ -210,10 +210,12 @@ a {
     list-style: outside decimal;
     li {
       font-weight: 400;
-      padding: 5px 0px;
-      font-family: "Roboto", sans-serif !important;
-      color: #555;
+      padding: 3px 0px;
       display: list-item;
+      font-size: 14px !important;
+      line-height: 24px !important;
+      color: #555 !important;
+      font-family: "Roboto", sans-serif;
       a {
         color: $primary-color !important;
 
@@ -232,10 +234,12 @@ a {
     list-style: outside url("../images/list_style.png");
     li {
       font-weight: 400;
-      padding: 5px 0px;
+      padding: 3px 0px;
       font-family: "Roboto", sans-serif !important;
-      color: #555;
       display: list-item;
+      font-size: 14px !important;
+      line-height: 24px !important;
+      color: #555 !important;
       a {
         color: $primary-color !important;
         &:hover {
