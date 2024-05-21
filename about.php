@@ -76,32 +76,28 @@
                             <div class="service-card">
                                 <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
                                 <h3 class="service-tittle">Web Development</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum debitis minima, sunt
-                                    quam ea ipsam expedita aut non ab nostrum.</p>
+                                <p>Offering comprehensive web development services, we design and develop dynamic and user-centric websites to meet your business needs.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="service-card">
                                 <div class="icon"><i class="fa-solid fa-ranking-star"></i></div>
                                 <h3 class="service-tittle">SEO</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum debitis minima, sunt
-                                    quam ea ipsam expedita aut non ab nostrum.</p>
+                                <p>We provide  SEO services that optimize websites to rank higher on search engine results pages. we boost your business page and make online visibility with driving organic traffic.<p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="service-card">
                                 <div class="icon"><i class="fa-solid fa-mobile"></i></div>
                                 <h3 class="service-tittle">Social Media Handaling</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum debitis minima, sunt
-                                    quam ea ipsam expedita aut non ab nostrum.</p>
+                                <p>we expertly managing your social media platforms, we engage audiences, build brand presence, and drive meaningful interactions to enhance your online community.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="service-card">
                                 <div class="icon"><i class="fa-brands fa-sketch"></i></div>
                                 <h3 class="service-tittle">Graphics Design</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum debitis minima, sunt
-                                    quam ea ipsam expedita aut non ab nostrum.</p>
+                                <p>Our graphic design services combine creativity and strategy to deliver best designs that resonate with your audience.</p>
                             </div>
                         </div>
                     </div>
@@ -134,7 +130,16 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="https://tashipalhotel.com/" target="_blank">
-                                        <img src="images/tashipalhotellogo.png" alt="Tashi Pal Hotel Pvt. Ltd." height="54" width="96">
+                                        <img src="images/tashipal-hotel-logo.jpeg" alt="Tashi Pal Hotel Pvt. Ltd." height="54" width="96">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="client-card">
+                                <figure>
+                                    <a href="#" >
+                                        <img src="images/nepal-buddhist-peace-society.png" alt="Nepal Buddhist Peace Society" height="54" width="96">
                                     </a>
                                 </figure>
                             </div>
@@ -148,33 +153,27 @@
                     <div class="testimonals-slider">
                         <div class="testimonals-cards">
                             <i class="fa-solid fa-quote-left"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit iure reiciendis neque quis
-                                earum nam deleniti in ex soluta velit non, magni quia natus placeat fugit nobis vitae
-                                culpa voluptatem aperiam vel laudantium. Voluptates, laboriosam sint. Perspiciatis
-                                minima repellat iste amet ab rem. Saepe,</p>
+                            <p>Amazing web development service! They turned our vision into reality with precision and efficiency. Highly recommend their expertise!</p>
                             <div class="review-des">
                                 <figure>
-                                    <img src="images/images (9).png" alt="">
+                                    <img src="images/dawa dorje hyolmo.jpg" alt="Dawa Dorje Hyolmo" height="120">
                                 </figure>
                                 <div class="des">
-                                    <h3 class="name">Jane Smith</h3>
-                                    <span>Executive Director OF Tesla</span>
+                                    <h3 class="name">Dawa Dorje Hyolmo (Kalu)</h3>
+                                    <span>Founder of Moon and Dragon Builder Pvt. Ltd. </span>
                                 </div>
                             </div>
                         </div>
                         <div class="testimonals-cards">
                             <i class="fa-solid fa-quote-left"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit iure reiciendis neque quis
-                                earum nam deleniti in ex soluta velit non, magni quia natus placeat fugit nobis vitae
-                                culpa voluptatem aperiam vel laudantium. Voluptates, laboriosam sint. Perspiciatis
-                                minima repellat iste amet ab rem. Saepe,</p>
+                            <p>They did an awesome job with our website! They made it look great and it works perfectly. Super happy with their work!</p>
                             <div class="review-des">
                                 <figure>
-                                    <img src="images/images (10).png" alt="">
+                                    <img src="images/pemba-sherpa.jpg" height="150" alt="Pemaba Sherpa a founder of Mahamudra tours and Travels">
                                 </figure>
                                 <div class="des">
-                                    <h3 class="name">Jane Smith</h3>
-                                    <span>Executive Director OF Tesla</span>
+                                    <h3 class="name">Pemba Sherpa</h3>
+                                    <span>Mahamudra Tours and Travels Pvt. Ltd.</span>
                                 </div>
                             </div>
                         </div>
