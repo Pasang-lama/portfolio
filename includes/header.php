@@ -9,7 +9,7 @@
     <meta name=keywords content="Web Design, Website developement, Social media handaler, technology, SEO, Responsive design, Freelancer, Freelancer web design, Graphics design, Hyolmo, UIUX Desing, Hyolmo People, Freelancer Web Designer, Freelancer UIUX Designer, Hyolmo Creative Link" />
     <meta name=description content="Are you looking for a web development team to design your website. choose us to turned your vision into reality with precision and efficiency. We provide web solution, SEO, Social media handaling and post design services that build brand presence." />
     <meta property=og:type content=website />
-    <meta property="og:image" content="images/Pasan-Sir.jpg"/>
+    <meta property="og:image" content="https://pasang-lama.com.np/images/Pasan-Sir.jpg"/>
     <meta property=og:title content="Pasang Lama a freelancer web designer | Provide web solution, SEO, Social media handaling and post design Services" />
     <meta property=og:site_name content="Pasang Lama a freelancer web designer" />
     <meta property=og:description content="Are you looking for a web development team to design your website. choose us to turned your vision into reality with precision and efficiency. We provide web solution, SEO, Social media handaling and post design services that build brand presence." />
