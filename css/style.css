@@ -50,6 +50,20 @@ body {
   font-family: "Roboto", sans-serif;
   min-height: 100vh; }
 
+.open-opacity {
+  position: fixed;
+  width: 100%; }
+  .open-opacity::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: 9; }
+
 .container {
   width: 90% !important;
   margin: 0 auto !important; }
@@ -339,6 +353,11 @@ a {
 
 .side-bar-wrapper {
   position: relative; }
+  @media (max-width: 991px) {
+    .side-bar-wrapper {
+      position: fixed;
+      left: -100%;
+      min-width: 400px; } }
   .side-bar-wrapper .side-bar {
     position: fixed;
     top: 0px;
@@ -346,6 +365,10 @@ a {
     min-height: 100vh;
     width: 16.66666667%;
     background-color: #2a2b30 !important; }
+    @media (max-width: 991px) {
+      .side-bar-wrapper .side-bar {
+        left: -100%;
+        min-width: 400px; } }
     .side-bar-wrapper .side-bar .profile-figure {
       position: relative; }
       .side-bar-wrapper .side-bar .profile-figure figure {
@@ -399,6 +422,34 @@ a {
         font-size: 12px !important;
         color: #909090;
         text-align: center; }
+
+header {
+  background-color: #2a2b30 !important;
+  padding: 10px 0px;
+  color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9999999; }
+  header .container {
+    display: flex;
+    justify-content: space-between; }
+  header .brand {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700; }
+  header button {
+    background-color: transparent !important;
+    border: none !important;
+    color: white;
+    font-size: 30px; }
+
+.side-bar-wrapper.open {
+  left: 0px;
+  z-index: 999999999; }
+  .side-bar-wrapper.open .side-bar {
+    left: 0px; }
 
 .hero-banner {
   height: 100vh;

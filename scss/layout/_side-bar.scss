@@ -1,5 +1,10 @@
 .side-bar-wrapper {
   position: relative;
+  @media (max-width: 991px) {
+    position: fixed;
+    left: -100%;
+    min-width: 400px;
+  }
   .side-bar {
     position: fixed;
     top: 0px;
@@ -7,6 +12,10 @@
     min-height: 100vh;
     width: 16.66666667%;
     background-color: #2a2b30 !important;
+    @media (max-width: 991px) {
+      left: -100%;
+      min-width: 400px;
+    }
     .profile-figure {
       position: relative;
       figure {
@@ -82,4 +91,36 @@
       }
     }
   }
+}
+header {
+  background-color: #2a2b30 !important;
+  padding: 10px 0px;
+  color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9999999;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .brand {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  button {
+    background-color: transparent !important;
+    border: none !important;
+    color: white;
+    font-size: 30px;
+  }
+}
+.side-bar-wrapper.open{
+left: 0px;
+z-index: 999999999;
+.side-bar {
+  left: 0px;
+}
 }

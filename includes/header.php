@@ -29,3 +29,9 @@
     <link rel="stylesheet" href="css/magnific-popup.css" />
 </head>
 <body>
+<header class="d-lg-none d-block">
+    <div class="container">
+        <a class="brand" href="/">Pasang Lama</a>
+        <button class="sidenavOpenBtn" data-nav-target="SideNav">☰</button>
+    </div>
+</header>
