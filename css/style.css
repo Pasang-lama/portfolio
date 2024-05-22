@@ -744,6 +744,63 @@ a {
   .contact-form .contact-form-wrapper textarea {
     height: 150px !important; }
 
+.portfolio-page .portfolio-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border: 1px dotted #00A3E1;
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: 50px; }
+  .portfolio-page .portfolio-tabs button {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #555;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    background: none;
+    border-radius: 50px; }
+  .portfolio-page .portfolio-tabs .active {
+    background-color: #00A3E1;
+    color: white !important; }
+.portfolio-page .tab-content {
+  margin-top: 20px; }
+  .portfolio-page .tab-content .project-card figure {
+    height: 250px;
+    margin-bottom: 0px !important;
+    position: relative;
+    border-radius: 5px; }
+    .portfolio-page .tab-content .project-card figure::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: #00A3E1;
+      opacity: 0;
+      transition: all 500ms linear; }
+    .portfolio-page .tab-content .project-card figure img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      scale: 1;
+      transition: all 500ms linear; }
+  .portfolio-page .tab-content .project-card h2 {
+    font-size: 16px !important;
+    text-align: center;
+    margin-top: 8px !important; }
+  .portfolio-page .tab-content .project-card:hover figure::after {
+    opacity: 0.5; }
+  .portfolio-page .tab-content .project-card:hover img {
+    scale: 1.1; }
+  .portfolio-page .tab-content .project-card:hover h2 {
+    color: #00A3E1; }
+
 /* Slider */
 .slick-slider {
   position: relative;

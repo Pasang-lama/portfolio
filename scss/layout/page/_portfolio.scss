@@ -1,0 +1,75 @@
+.portfolio-page {
+  .portfolio-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border: 1px dotted $secondary-color;
+    width: fit-content;
+    margin-inline: auto;
+    border-radius: 50px;
+    button {
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #555;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: none;
+      background: none;
+      border-radius: 50px;
+    }
+    .active {
+      background-color: $secondary-color;
+      color: white !important;
+    }
+  }
+  .tab-content {
+    margin-top: 20px;
+    .project-card {
+      figure {
+        height: 250px;
+        margin-bottom: 0px !important;
+        position: relative;
+        border-radius: 5px;
+        &::after {
+          content: "";
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          background-color: $secondary-color;
+          opacity: 0;
+          transition: all 500ms linear;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          scale: 1;
+          transition: all 500ms linear;
+        }
+      }
+      h2 {
+        font-size: 16px !important;
+        text-align: center;
+        margin-top: 8px !important;
+      }
+      &:hover {
+        figure{
+            &::after {
+                opacity: 0.5;
+              }
+        }
+        img {
+          scale: 1.1;
+        }
+        h2 {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

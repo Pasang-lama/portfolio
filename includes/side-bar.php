@@ -12,7 +12,7 @@
             <li class="active"><a  href="/"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
             <li><a href="about"><i class="fa-solid fa-user"></i>About me</a></li>
             <li><a href="resume"><i class="fa-solid fa-file-circle-check"></i>Resume</a></li>
-            <li><a href="#"><i class="fa-solid fa-laptop-code"></i>Portfolio</a></li>
+            <li><a href="portfolio"><i class="fa-solid fa-laptop-code"></i>Portfolio</a></li>
             <li><a href="#"><i class="fa-solid fa-file-pen"></i>Blog</a></li>
             <li><a href="#"><i class="fa-regular fa-images"></i>Gallery</a></li>
             <li><a href="#"><i class="fa-regular fa-address-book"></i>Contact</a></li>
