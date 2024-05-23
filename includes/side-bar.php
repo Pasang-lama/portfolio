@@ -1,11 +1,10 @@
 <div class="side-bar-wrapper" id="SideNav">
-    <button class="sidenavCloseBtn d-lg-none d-block" data-nav-target="SideNav">X</button>
     <div class="side-bar">
         <div class="profile-figure">
             <figure>
-                <img src="images/Pasan-Sir.jpg" alt="">
+                <img src="images/Pasang_lama.jpg" alt="Pasang Lama">
             </figure>
-            <h1 class="name">Pasang Lama</h1>
+            <div class="name">Pasang Lama</div>
         </div>
         <div class="main-navigation-menu">
             <ul>

@@ -3,7 +3,8 @@
   @media (max-width: 991px) {
     position: fixed;
     left: -100%;
-    min-width: 400px;
+    min-width: 250px;
+    transition: left 0.4s linear;
   }
   .side-bar {
     position: fixed;
@@ -14,13 +15,16 @@
     background-color: #2a2b30 !important;
     @media (max-width: 991px) {
       left: -100%;
-      min-width: 400px;
+      min-width: 250px;
+    transition: left 0.4s linear;
     }
     .profile-figure {
       position: relative;
       figure {
-        height: 200px;
         width: 100%;
+        @media (max-width: 991px) {
+          height: 250px;
+        }
       }
       .name {
         position: absolute;
@@ -34,6 +38,7 @@
         width: 100%;
         font-size: 18px !important;
         letter-spacing: 1px;
+        font-weight: 700;
       }
     }
     .main-navigation-menu {
@@ -94,7 +99,7 @@
 }
 header {
   background-color: #2a2b30 !important;
-  padding: 10px 0px;
+  padding: 20px 0px;
   color: white;
   position: fixed;
   top: 0px;
@@ -104,6 +109,7 @@ header {
   .container {
     display: flex;
     justify-content: space-between;
+    padding: 0px !important;
   }
   .brand {
     text-transform: uppercase;
@@ -111,16 +117,58 @@ header {
     font-weight: 700;
   }
   button {
-    background-color: transparent !important;
-    border: none !important;
-    color: white;
-    font-size: 30px;
+    border: none;
+    position: relative;
+    width: 25px;
+    background-color: transparent;
+    span,
+    span::before,
+    span::after {
+      transition: background 0.3s, transform 0.3s;
+    }
+    span,
+    span::before,
+    span::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      height: 3px;
+      width: 25px;
+      background: white;
+    }
+    span::before {
+      transform: translateY(-9px);
+      width: 100%;
+    }
+    span::after {
+      transform: translateY(9px);
+      width: 100%;
+    }
   }
 }
-.side-bar-wrapper.open{
-left: 0px;
-z-index: 999999999;
-.side-bar {
-  left: 0px;
+
+body.open-opacity {
+  header {
+    button {
+      span {
+       background-color: transparent !important;
+        &::after {
+          transform: rotate(45deg);
+          opacity: 1;
+        }
+        &::before {
+          opacity: 1;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 }
+
+.side-bar-wrapper.open {
+  left: 0px;
+  z-index: 999999999;
+  .side-bar {
+    left: 0px;
+  }
 }

@@ -13,7 +13,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-8 col-md-12 col-sm-12">
                         <div class="about-me-content-wrapper">
-                            <h2 class="block-tittle"> Hello, I'm Pasang Lama, a UI/UX Designer based in Kathmandu Nepal.
+                            <h2 class="block-tittle"> Hello, I'm Pasang Lama, a freelancer web Developer based in Kathmandu Nepal.
                             </h2>
                             <div class="text-document-content">
                                 <p>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="digital-signature">
                                 <figure>
-                                    <img src="https://watson-vcard.netlify.app/img/signature-black.png" alt="">
+                                    <img src="images/signature.png" height="30" alt="Pasang Lama Signature">
                                 </figure>
                             </div>
                         </div>

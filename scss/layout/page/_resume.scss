@@ -5,6 +5,10 @@
     position: relative;
     padding: 0 0 0 50px;
     width: calc(100% - 90px);
+    @media (max-width: 767px) {
+      margin: 20px 0 50px 60px !important;
+    width: calc(100% - 60px);
+    }
     li {
       position: relative;
       margin-left: 10px;
@@ -94,20 +98,20 @@
 }
 
 .progress-bar-wrapper {
-  .progress-bar{
+  .progress-bar {
     margin: 0 0 10px;
-	background-color: transparent !important;
-	padding-right: 24px;
+    background-color: transparent !important;
+    padding-right: 24px;
     .progress-title-holder {
       padding-bottom: 7px;
       position: relative;
       margin: 5px 0;
       .progress-title {
-       text-align: left;
-	   font-size: 18px;
-	   line-height: 18px;
-	   font-weight: 600;
-	   color: #555;
+        text-align: left;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 600;
+        color: #555;
       }
       .progress-number-wrapper {
         width: 100%;

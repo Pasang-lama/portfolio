@@ -17,7 +17,7 @@ body {
 .open-opacity {
   position: fixed;
   width: 100%;
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -61,7 +61,7 @@ p {
   @include space-between;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
-  margin:0px 0px 50px 0px !important;
+  margin: 0px 0px 50px 0px !important;
   .page-tittle {
     font-size: 36px !important;
     font-weight: 700;
@@ -70,6 +70,10 @@ p {
     text-transform: capitalize;
     color: $secondary-color;
     display: inline-block;
+    @media (max-width: 480px) {
+      font-size: 30px;
+      letter-spacing: 1.3px;
+    }
   }
   .side-icon {
     i {
@@ -313,22 +317,23 @@ a {
     text-transform: uppercase;
     padding: 5px 10px !important;
     border-bottom: 2px solid $secondary-color;
-    &::after, &::before {
+    &::after,
+    &::before {
       position: absolute;
       content: "";
       width: 2px;
       height: 5px;
-      background-color:  $secondary-color;
+      background-color: $secondary-color;
       bottom: 0;
     }
-    &::after{
+    &::after {
       left: 0;
     }
-    &::before{
+    &::before {
       right: 0;
     }
   }
 }
-.page-wrapper{
+.page-wrapper {
   margin: 80px 0px;
 }

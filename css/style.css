@@ -103,6 +103,10 @@ p {
     text-transform: capitalize;
     color: #00A3E1;
     display: inline-block; }
+    @media (max-width: 480px) {
+      .page-header .page-tittle {
+        font-size: 30px;
+        letter-spacing: 1.3px; } }
   .page-header .side-icon i {
     color: #00A3E1;
     font-size: 30px; }
@@ -357,7 +361,8 @@ a {
     .side-bar-wrapper {
       position: fixed;
       left: -100%;
-      min-width: 400px; } }
+      min-width: 250px;
+      transition: left 0.4s linear; } }
   .side-bar-wrapper .side-bar {
     position: fixed;
     top: 0px;
@@ -368,12 +373,15 @@ a {
     @media (max-width: 991px) {
       .side-bar-wrapper .side-bar {
         left: -100%;
-        min-width: 400px; } }
+        min-width: 250px;
+        transition: left 0.4s linear; } }
     .side-bar-wrapper .side-bar .profile-figure {
       position: relative; }
       .side-bar-wrapper .side-bar .profile-figure figure {
-        height: 200px;
         width: 100%; }
+        @media (max-width: 991px) {
+          .side-bar-wrapper .side-bar .profile-figure figure {
+            height: 250px; } }
       .side-bar-wrapper .side-bar .profile-figure .name {
         position: absolute;
         left: 0;
@@ -385,7 +393,8 @@ a {
         padding: 10px !important;
         width: 100%;
         font-size: 18px !important;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        font-weight: 700; }
     .side-bar-wrapper .side-bar .main-navigation-menu ul li {
       display: block;
       padding: 7px 40px;
@@ -425,7 +434,7 @@ a {
 
 header {
   background-color: #2a2b30 !important;
-  padding: 10px 0px;
+  padding: 20px 0px;
   color: white;
   position: fixed;
   top: 0px;
@@ -434,16 +443,45 @@ header {
   z-index: 9999999; }
   header .container {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 0px !important; }
   header .brand {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 700; }
   header button {
-    background-color: transparent !important;
-    border: none !important;
-    color: white;
-    font-size: 30px; }
+    border: none;
+    position: relative;
+    width: 25px;
+    background-color: transparent; }
+    header button span,
+    header button span::before,
+    header button span::after {
+      transition: background 0.3s, transform 0.3s; }
+    header button span,
+    header button span::before,
+    header button span::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      height: 3px;
+      width: 25px;
+      background: white; }
+    header button span::before {
+      transform: translateY(-9px);
+      width: 100%; }
+    header button span::after {
+      transform: translateY(9px);
+      width: 100%; }
+
+body.open-opacity header button span {
+  background-color: transparent !important; }
+  body.open-opacity header button span::after {
+    transform: rotate(45deg);
+    opacity: 1; }
+  body.open-opacity header button span::before {
+    opacity: 1;
+    transform: rotate(-45deg); }
 
 .side-bar-wrapper.open {
   left: 0px;
@@ -477,13 +515,20 @@ header {
     .hero-banner .banner-text h1 {
       font-size: 56px !important;
       letter-spacing: 2px;
-      font-weight: 700; }
+      font-weight: 700;
+      white-space: nowrap; }
+      @media (max-width: 480px) {
+        .hero-banner .banner-text h1 {
+          font-size: 36px !important; } }
       .hero-banner .banner-text h1 span {
         color: #00A3E1; }
     .hero-banner .banner-text .animated-text {
       font-size: 24px;
       letter-spacing: 1px;
       line-height: 32px; }
+      @media (max-width: 480px) {
+        .hero-banner .banner-text .animated-text {
+          font-size: 20px; } }
       .hero-banner .banner-text .animated-text .typingText {
         font-weight: 700;
         padding-bottom: 3px;
@@ -500,6 +545,10 @@ header {
   position: relative;
   padding: 0 0 0 50px;
   width: calc(100% - 90px); }
+  @media (max-width: 767px) {
+    .resume-section ul.experience {
+      margin: 20px 0 50px 60px !important;
+      width: calc(100% - 60px); } }
   .resume-section ul.experience li {
     position: relative;
     margin-left: 10px;
