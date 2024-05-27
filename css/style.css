@@ -856,6 +856,9 @@ body.open-opacity header button span {
   width: fit-content;
   margin-inline: auto;
   border-radius: 50px; }
+  @media (max-width: 991px) {
+    .portfolio-page .portfolio-tabs {
+      border: none; } }
   .portfolio-page .portfolio-tabs button {
     font-size: 14px;
     font-weight: 600;
@@ -868,6 +871,10 @@ body.open-opacity header button span {
     border: none;
     background: none;
     border-radius: 50px; }
+    @media (max-width: 991px) {
+      .portfolio-page .portfolio-tabs button {
+        font-size: 12px;
+        padding: 5px 10px; } }
   .portfolio-page .portfolio-tabs .active {
     background-color: #00A3E1;
     color: white !important; }
