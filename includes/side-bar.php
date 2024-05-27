@@ -24,6 +24,8 @@
                     </li>
                     <li><a class="twitter" href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     </li>
+                    <li><a class="twitter" href="https://www.behance.net/pasanglama13" target="_blank"><i class="fa-brands fa-behance"></i></a>
+                    </li>
                     <li><a class="instagram" href="https://www.instagram.com/pasang_shyangba_hyolmo/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li><a class="linkedin" href="https://www.linkedin.com/in/pasang-lama-429aa5208/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
