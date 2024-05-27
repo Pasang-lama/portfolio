@@ -10,7 +10,7 @@
                     <h1 class="page-tittle">Portfolio.</h1>
                     <div class="side-icon"><i class="fa-solid fa-laptop-code"></i></div>
                 </div>
-                <section class="custom-margin portfolio-page">
+                <section class=" portfolio-page">
                     <nav>
                         <div class="nav portfolio-tabs" id="portfolio-tabs" role="tablist">
                             <button class="nav-link active" id="all-project-tab" data-bs-toggle="tab" data-bs-target="#all-project" type="button" role="tab" aria-controls="all-project" aria-selected="true">All Projects</button>
@@ -24,9 +24,9 @@
                             <div class="row gy-4 justify-content-center">
                                 <div class="col-lg-4 col-md-12 col-sm-12">
                                     <div class="project-card">
-                                        <a href="images/images (24).png">
+                                        <a href="project-details">
                                             <figure>
-                                                <img src="images/images (24).png" alt="">
+                                                <img src="images/moon_and_dragon_cover.png" alt="">
                                             </figure>
                                             <h2>Tashi Pal Hotels Pvt. Ltd.</h2>
                                         </a>
@@ -34,9 +34,9 @@
                                 </div>
                                 <div class="col-lg-4 col-md-12 col-sm-12">
                                     <div class="project-card">
-                                        <a href="images/images (24).png">
+                                    <a href="project-details">
                                             <figure>
-                                                <img src="images/images (24).png" alt="">
+                                                <img src="images/moon_and_dragon_cover.png" alt="">
                                             </figure>
                                             <h2>Moon and Dragon Builder Pvt. Ltd.</h2>
                                         </a>
@@ -44,9 +44,9 @@
                                 </div>
                                 <div class="col-lg-4 col-md-12 col-sm-12">
                                     <div class="project-card">
-                                        <a href="images/images (24).png">
+                                    <a href="project-details">
                                             <figure>
-                                                <img src="images/images (24).png" alt="">
+                                                <img src="images/moon_and_dragon_cover.png" alt="">
                                             </figure>
                                             <h2>Mahamudra Sherpa Tours and Travels</h2>
                                         </a>
@@ -54,9 +54,9 @@
                                 </div>
                                 <div class="col-lg-4 col-md-12 col-sm-12">
                                     <div class="project-card">
-                                        <a href="images/images (24).png">
+                                    <a href="project-details">
                                             <figure>
-                                                <img src="images/images (24).png" alt="">
+                                                <img src="images/moon_and_dragon_cover.png" alt="">
                                             </figure>
                                             <h2>Nepal Buddhist Peace Society</h2>
                                         </a>
@@ -68,9 +68,9 @@
                             <div class="row gy-4 justify-content-center">
                                 <div class="col-lg-4 col-md-12 col-sm-12">
                                     <div class="project-card">
-                                        <a href="images/images (24).png">
+                                    <a href="project-details">
                                             <figure>
-                                                <img src="images/images (24).png" alt="">
+                                                <img src="images/moon_and_dragon_cover.png" alt="">
                                             </figure>
                                             <h2>Mahamudra Sherpa Tours and Travels</h2>
                                         </a>
@@ -82,9 +82,9 @@
                             <div class="row gy-4 justify-content-center">
                                 <div class="col-lg-4 col-md-12 col-sm-12">
                                     <div class="project-card">
-                                        <a href="images/images (24).png">
+                                    <a href="project-details">
                                             <figure>
-                                                <img src="images/images (24).png" alt="">
+                                                <img src="images/moon_and_dragon_cover.png" alt="">
                                             </figure>
                                             <h2>Nepal Buddhist Peace Society</h2>
                                         </a>
@@ -96,9 +96,9 @@
                             <div class="row gy-4 justify-content-center">
                                 <div class="col-lg-4 col-md-12 col-sm-12">
                                     <div class="project-card">
-                                        <a href="images/images (24).png">
+                                    <a href="project-details">
                                             <figure>
-                                                <img src="images/images (24).png" alt="">
+                                                <img src="images/moon_and_dragon_cover.png" alt="">
                                             </figure>
                                             <h2>Moon and Dragon Builder</h2>
                                         </a>

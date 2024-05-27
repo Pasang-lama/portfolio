@@ -10,7 +10,10 @@
     }
   }
 }
-.personal-information {
+.aside-information {
+  position: sticky;
+  top: 20px;
+  z-index: 999;
   ul {
     li {
       font-size: 16px;

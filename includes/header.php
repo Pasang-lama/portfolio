@@ -34,6 +34,6 @@
     <header class="d-lg-none d-block">
         <div class="container">
             <a class="brand" href="/">Pasang Lama</a>
-            <button class="sidenavOpenBtn"  id="sidenavOpenBtn"><span></span></button>
+            <button class="sidenavOpenBtn" aria-label="sidenavtoggleButton" role="button" id="sidenavOpenBtn"><span></span></button>
         </div>
     </header>

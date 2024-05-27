@@ -13,32 +13,30 @@
                 <div class="row gy-4">
                     <div class="col-lg-8 col-md-12 col-sm-12">
                         <div class="about-me-content-wrapper">
-                            <h2 class="block-tittle"> Hello, I'm Pasang Lama, a freelancer web Developer based in Kathmandu Nepal.
+                            <h2 class="block-tittle"> Hello, I'm Pasang Lama (Hyolmo), a freelancer web Developer based in Kathmandu Nepal.
                             </h2>
                             <div class="text-document-content">
+                                <p>Hello! I'm Pasang Lama, a dedicated web designer with over 
+                                    3 years of experience creating visually compelling and user-friendly websites.
+                                    With a background in digital marketing and specialized training in web development and UX design, I blend creativity with technical
+                                     expertise to deliver exceptional digital experiences. I hold a bachelor degree in computer science and have further honed my skills through various certifications in web development and user experience (UX) design.
+                                Beside this, I used to train student at IT Training Nepal as a web design instructor.</p>
+
+                                <p>My design philosophy revolves around the user, ensuring that every website
+                                    I create is not only look beautiful but also intuitive and functional.
+                                    I'm proficient in a wide range of design tools and programming languages,
+                                    such as Figma, HTML, CSS, JavaScript, WordPress, ReactJs, PHP and Laravel.
+                                    My portfolio showcases a variety of projects, that allowed me to work across diverse
+                                    industries, including e-commerce, tours and travels, technology, NGO, personal portfolio and creative arts.</p>
                                 <p>
-                                    Passionate about crafting seamless digital experiences, I specialize in designing user
-                                    interfaces that marry aesthetics with functionality. Armed with a degree in BCS(Hons)
-                                    from Sunway Business College, I've spent the past 2 years refining my
-                                    skills at industry-leading firms from Ultrabyte Internstional PVt. Ltd.</p>
-                                <p>
-                                    My journey in UI/UX design has been marked by a dedication to user-centered principles.
-                                    I've had the privilege of spearheading projects that have transformed user journeys,
-                                    resulting in tangible improvements in conversion rates and user satisfaction metrics.</p>
-                                <p>
-                                    With expertise in Figma, I approach each
-                                    project with an emphasis on intuitive navigation and visually engaging interfaces. I
-                                    firmly believe that effective design should not only look beautiful, but also guide
-                                    users seamlessly through their digital interactions.</p>
-                                <p>
-                                    Below, you'll find a selection of recent projects that showcase my commitment to
-                                    elevating user experiences. Each design is a testament to my belief in the power of
-                                    thoughtful, user-centric design. If you're as passionate about creating intuitive,
-                                    elegant interfaces as I am, I'd love to hear from you. Feel free to reach out at <a href="mailto:lpasang182@gmail.com">lpasang182@gmail.com</a>
+                                    Throughout my career, I've been recognized for my meticulous
+                                    attention to detail and my ability to understand and translate client needs into
+                                    compelling digital solutions. I am passionate about exploring the latest trends in web
+                                    technology.
                                 </p>
+                                <p>When I'm free, I enjoy learning new web technologies, participating in design communities, and continually learning to keep my skills sharp. I invite you to explore my portfolio to see the impact of my work and to get in touch if you're interested in collaborating.</p>
                                 <p>
-                                    Thank you for visiting my portfolio. I'm excited about the potential of collaborating on
-                                    projects that shape the future of digital interactions. </p>
+                                    Thank you for visiting my portfolio. Feel free to reach out via email or connect with me on LinkedIn. Let's create something amazing together!</p>
                             </div>
                             <div class="digital-signature">
                                 <figure>
@@ -49,14 +47,14 @@
 
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="personal-information">
+                        <aside class="aside-information">
                             <h2 class="block-tittle">Personal Information</h2>
                             <ul>
                                 <li><span>Name:</span>Pasang Lama</li>
                                 <li><span>Age:</span>24 Years</li>
                                 <li><span>Residence:</span>Aarubari, Gokarneshwor-8</li>
                                 <li><span>Address:</span>Helambu-1, Sindhupalchok, Nepal</li>
-                                <li><span>Email:</span><a href="mailto:lpasang182@gmail.com">lpasang182@gmail.com</a>
+                                <li><span>Email:</span><a href="mailto:pasanglama66666@gmail.com">pasanglama66666@gmail.com</a>
                                 </li>
                                 <li><span>Phone:</span><a href="tel:9745948260">9745948260</a></li>
                                 <li><span>Freelance:</span>Available</li>
@@ -64,7 +62,7 @@
                             <div class="custom-buttons mt-5">
                                 <a href="files/Pasang_lama_CV_UIUX.pdf" download> DOWNLOAD RESUME</a>
                             </div>
-                        </div>
+                        </aside>
                     </div>
                 </div>
                 <section class="custom-margin service-section">
@@ -83,7 +81,8 @@
                             <div class="service-card">
                                 <div class="icon"><i class="fa-solid fa-ranking-star"></i></div>
                                 <h3 class="service-tittle">SEO</h3>
-                                <p>We provide  SEO services that optimize websites to rank higher on search engine results pages. we boost your business page and make online visibility with driving organic traffic.<p>
+                                <p>We provide SEO services that optimize websites to rank higher on search engine results pages. we boost your business page and make online visibility with driving organic traffic.
+                                <p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -111,7 +110,7 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="https://mahamudratravels.com.np/" target="_blank">
-                                        <img src="images/mahamudralogo.png" alt="Mahamudra Tours and Travels" height="90" >
+                                        <img src="images/mahamudralogo.png" alt="Mahamudra Tours and Travels" height="90">
                                     </a>
                                 </figure>
                             </div>
@@ -121,7 +120,7 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="https://moonanddragonbuilder.com/" target="_blank">
-                                        <img src="images/moonanddragonbuilder.png" alt="Moon and Dragon Builder Pvt. Ltd." height="90" >
+                                        <img src="images/moonanddragonbuilder.png" alt="Moon and Dragon Builder Pvt. Ltd." height="90">
                                     </a>
                                 </figure>
                             </div>
@@ -130,7 +129,7 @@
                             <div class="client-card">
                                 <figure>
                                     <a href="https://tashipalhotel.com/" target="_blank">
-                                        <img src="images/tashipal-hotel-logo.png" alt="Tashi Pal Hotel Pvt. Ltd." height="90" >
+                                        <img src="images/tashipal-hotel-logo.png" alt="Tashi Pal Hotel Pvt. Ltd." height="90">
                                     </a>
                                 </figure>
                             </div>
@@ -138,8 +137,17 @@
                         <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                             <div class="client-card">
                                 <figure>
-                                    <a href="#" >
-                                        <img src="images/nepal-buddhist-peace-society.png" alt="Nepal Buddhist Peace Society" height="90" >
+                                    <a href="#">
+                                        <img src="images/nepal-buddhist-peace-society.png" alt="Nepal Buddhist Peace Society" height="90">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                            <div class="client-card">
+                                <figure>
+                                    <a href="https://tseringchoenzom.com.np/" target="_blank">
+                                        <img src="images/tsering_choenzom_ghale.png" alt="Tsering Choenzom Ghale a makeup artist" height="90">
                                     </a>
                                 </figure>
                             </div>

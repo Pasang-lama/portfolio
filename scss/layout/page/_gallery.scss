@@ -1,0 +1,58 @@
+.gallery-card {
+  figure {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 767px) {
+      height: 200px;
+    }
+    figcaption {
+      position: absolute;
+      bottom: 0px;
+      background-color: #03a9f4a3;
+      width: 100%;
+      padding: 10px;
+      h2 {
+        font-size: 16px;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  grid-gap: 5px;
+  grid-auto-rows: 15vw;
+  margin-top: 0 !important;
+  @media (max-width: 767px) {
+    grid-auto-rows: 20vw;
+    grid-gap: 1px;
+  }
+  figure {
+    height: 100%;
+    width: 100%;
+  }
+  li {
+    --row-step: calc(3 * var(--n));
+    &:nth-child(7n + 1) {
+      grid-row: calc(1 + var(--row-step)) / span 2;
+    }
+    &:nth-child(7n + 4) {
+      grid-row: calc(1 + var(--row-step)) / span 2;
+    }
+    &:nth-child(7n + 6) {
+      grid-column: 2 / span 2;
+      grid-row: calc(2 + var(--row-step)) / span 2;
+    }
+  }
+}

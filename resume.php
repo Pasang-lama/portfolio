@@ -180,7 +180,7 @@
                                     <li> Critical thinking and problem-solving skills </li>
                                     <li> Communication and Organizational skills </li>
                                     <li> Continuous Learning and self Motivation</li>
-                                    <li> project and Time management skills </li>
+                                    <li> Project and Time management skills </li>
                                     <li>Pressure handling</li>
                                     <li>Collaboration and Teamwork</li>
                                     <li>Client and User Focus</li>

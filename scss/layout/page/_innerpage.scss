@@ -1,0 +1,44 @@
+.details-page-thumbnail{
+    max-height: 50vh;
+}
+.page-header-wrapper{
+    padding: 20px 50px ;
+    width: fit-content;
+    margin: 0px auto;
+    text-align: center;
+    background-color: #FBFBFB;
+    margin-top: -100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    letter-spacing: .5px;
+    position: relative;
+    span{
+        width: 100%;
+        display: block;
+        color: $secondary-color;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .page-title {
+        font-size: 26px !important;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        line-height: 1em !important;
+        text-transform: capitalize;
+        display: inline-block;
+        @media (max-width: 480px) {
+          font-size: 30px;
+          letter-spacing: 1.3px;
+        }
+      }
+      time{
+        display: block;
+        font-family: serif;
+        font-style: italic;
+        color: #777;
+        font-size: 14px;
+      }
+}
