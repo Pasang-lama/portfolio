@@ -1,38 +1,30 @@
-<?php include('includes/header.php');?>
-<div class=" landing-page-wrapper" style="background-image:url('./images/background.jpg')">
-    <div class="row gy-4 gx-0">
-        <div class="col-lg-2">
-            <?php include('includes/side-bar.php');?>
-        </div>
-        <div class="col-lg-10">
-            <div class="hero-banner">
-                <div class="container">
-                    <div class="banner-text">
-                        <!-- https://watson-vcard.netlify.app/index-light.html#home -->
-                        <h1>Pasang  <span>Lama</span> </h1>
-                        <div class="animated-text">I am a <span class="typingText">PHP Laravel Developer</span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<?php
+require_once("vendor/autoload.php");
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+require_once("helper/config.php");
+require_once("helper/Database.php");
+require("helper/mail.php");
+$uri = isset($_GET['uri']) ? $_GET['uri'] : 'home';
+$uri = str_replace(".php", "", $uri);
+$title = ucfirst($uri);
+$uri = $uri . ".php";
+$pagePath = "pages/" . $uri;
+require_once("layouts/header.php");
+?>
+
+<div class="row gy-4 gx-0">
+    <div class="col-lg-2">
+      <?= require_once("layouts/sidebar.php"); ?>
+    </div>
+    <div class="col-lg-10  ">
+        <?php
+        if (file_exists($pagePath) && is_file($pagePath)) {
+            require_once($pagePath);
+        } else {
+            require_once("helper/404.php");
+        }
+        ?>
     </div>
 </div>
-<!-- typing animation  -->
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/typed.min.js"></script>
-<script>
-var typing = new Typed(".typingText", {
-  strings: [
-    "",
-    "PHP Laravel Developer",
-    "Freelancer",
-    "Web Designer",
-    "UI-UX Designer",
-    "WordPress Designer",
-  ],
-  typeSpeed: 100,
-  backSpeed: 60,
-  loop: true,
-});
-</script>
-<?php include('includes/footer.php');?>
+<?= require_once("layouts/footer.php"); ?>
