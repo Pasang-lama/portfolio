@@ -37,34 +37,27 @@ $(document).ready(function () {
 });
 function previewCoverImage(input) {
     const previewContainer = document.getElementById('previewContainer');
-    previewContainer.innerHTML = ''; // Clear previous previews
+    previewContainer.innerHTML = '';
+    const filesArray = Array.from(input.files); // Convert FileList to an array
 
-    // Store the file input for clearing it later
-    const fileInput = input;
-
-    const files = input.files;
-
-    for (const file of files) {
+    filesArray.forEach((file, index) => {
         if (file && file.type.startsWith('image/')) {
             const reader = new FileReader();
-
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 const container = document.createElement('div');
-                container.classList.add('preview-item');
-                
+                container.classList.add('preview-item', 'text-center', 'col-lg-3', 'col-md-4', 'col-6');
                 const img = document.createElement('img');
                 img.src = e.target.result;
-                img.style.maxWidth = '150px';
-                img.style.margin = '10px';
+                img.style.height = '150px';
+                img.classList.add('w-100', 'img-fluid', 'object-fit-cover');
                 const deleteBtn = document.createElement('button');
                 deleteBtn.textContent = 'Delete';
-                deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
+                deleteBtn.classList.add('btn', 'btn-danger', 'mt-3' , 'btn-sm');
                 deleteBtn.style.marginTop = '5px';
-                deleteBtn.onclick = function() {
+                deleteBtn.onclick = function () {
                     container.remove();
-                    if (previewContainer.children.length === 0) {
-                        fileInput.value = ''; 
-                    }
+                    filesArray[index] = null; // Mark the file as null
+                    updateFileInput(); // Update the file input
                 };
                 container.appendChild(img);
                 container.appendChild(deleteBtn);
@@ -72,5 +65,16 @@ function previewCoverImage(input) {
             };
             reader.readAsDataURL(file);
         }
+    });
+
+    function updateFileInput() {
+        const dataTransfer = new DataTransfer(); // Create a new DataTransfer object
+        filesArray.forEach(file => {
+            if (file) {
+                dataTransfer.items.add(file); // Add non-null files to DataTransfer object
+            }
+        });
+        input.files = dataTransfer.files; // Update the input's files property
     }
 }
+

@@ -13,7 +13,7 @@ $db = new Database();
             foreach ($albums as $album) {
             ?>
                 <div class="col-lg-3 col-md-4 col-6">
-                    <a href="gallery-single" class="gallery-card">
+                    <a href="<?=url('gallery-single?slug='.$album->slug)?>" class="gallery-card">
                         <figure>
                             <?php
                             $imageUrl = $album->cover ? url($album->cover) : url("public/images/blog.jpg");

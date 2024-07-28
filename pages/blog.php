@@ -14,12 +14,12 @@ JOIN category ON blogs.category_id=category.cid WHERE blogs.status = '1' ORDER B
             foreach ($blogs as $blog) {
             ?>
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="blog-details" class="blog-card">
+                    <a href="<?=url('blog-details?slug='.$blog->slug)?>" class="blog-card">
                         <figure>
                             <?php
                             $imageUrl = $blog->image ? url($blog->image) : url("public/images/blog.jpg");
                             ?>
-                            <img src="<?= $imageUrl ?>" alt="">
+                            <img src="<?= $imageUrl ?>" alt="<?= $blog->title ?>">
                         </figure>
                         <div class="blog-details">
                             <span><?= $blog->cat_name; ?> </span>

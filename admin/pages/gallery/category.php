@@ -107,6 +107,13 @@ if (isset($_GET['did'])) {
     header('Location:' . url('admin/gallery/category'));
     exit();
 }
+// if (isset($_GET['mid'])) {
+//     $albumid = $_GET['mid'];
+//     $_SESSION['album_id'] = $albumid ;
+//     header('Location:' . url('admin/gallery/manage'));
+//     exit();
+// }
+// unset($_SESSION['album_id']);
 ?>
 <main id="main" class="main">
     <div class="pagetitle">

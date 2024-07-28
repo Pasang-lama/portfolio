@@ -913,7 +913,8 @@ body.open-opacity header button span {
     color: #00A3E1; }
 
 .details-page-thumbnail {
-  max-height: 50vh; }
+  max-height: 50vh;
+  min-height: 40vh; }
 
 .page-header-wrapper {
   padding: 20px 50px;

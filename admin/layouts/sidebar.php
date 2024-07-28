@@ -52,6 +52,23 @@
       </ul>
     </li>
     <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#qualification" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-blockquote-left"></i><span>Qualification</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="qualification" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href=" <?= admin_url("education/manage") ?>">
+            <i class="bi bi-circle"></i><span>Manage Qualification</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?= admin_url("education/add") ?>">
+            <i class="bi bi-circle"></i><span>Add Degree</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
       <a class="nav-link collapsed" data-bs-target="#testimonals" data-bs-toggle="collapse" href="#">
         <i class="bi bi-blockquote-left"></i><span>Review</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
