@@ -116,8 +116,8 @@ $user = $userdata[0];
         </section>
     </div>
 </div>
-<script src="./public/js/jquery-3.6.0.min.js"></script>
-<script src="./public/js/slick.min.js"></script>
+<script src="<?=url("public/js/jquery-3.6.0.min.js")?>"></script>
+<script src="<?= url("public/js/slick.min.js")?>"></script>
 <script>
     $(document).ready(function() {
         if ($(".testimonals-slider").length > 0) {

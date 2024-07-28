@@ -53,7 +53,7 @@
     </li>
     <li class="nav-item">
       <a class="nav-link collapsed" data-bs-target="#qualification" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-blockquote-left"></i><span>Qualification</span><i class="bi bi-chevron-down ms-auto"></i>
+      <i class="bi bi-bank2"></i><span>Qualification</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
       <ul id="qualification" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
@@ -69,8 +69,42 @@
       </ul>
     </li>
     <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#experience" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-ui-checks"></i><span>Experience</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="experience" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href=" <?= admin_url("experience/manage") ?>">
+            <i class="bi bi-circle"></i><span>Manage Experience</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?= admin_url("experience/add") ?>">
+            <i class="bi bi-circle"></i><span>Add Experience</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#skills" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-layer-forward"></i><span>Skills</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="skills" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href=" <?= admin_url("skill/technical") ?>">
+            <i class="bi bi-circle"></i><span>Technical Skills</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?= admin_url("skill/softskill") ?>">
+            <i class="bi bi-circle"></i><span>Soft skills</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
       <a class="nav-link collapsed" data-bs-target="#testimonals" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-blockquote-left"></i><span>Review</span><i class="bi bi-chevron-down ms-auto"></i>
+      <i class="bi bi-quote"></i><span>Review</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
       <ul id="testimonals" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
@@ -85,6 +119,7 @@
         </li>
       </ul>
     </li>
+ 
     <li lass="nav-item">
       <a class="nav-link " href="<?= admin_url("client") ?>">
         <i class="bi bi-person-workspace"></i><span>Clients</span>

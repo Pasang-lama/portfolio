@@ -1,8 +1,19 @@
 <?php
 $db = new Database();
 $errors = [
-    'title' => '',
-    'institute' => '',
+    'post' => '',
+    'company' => '',
+    'address' => '',
+    'description' => '',
+    'start_date' => '',
+    'end_date' => '',
+    'status' => '',
+
+];
+
+$oldValue = [
+    'post' => '',
+    'company' => '',
     'address' => '',
     'description' => '',
     'start_date' => '',
@@ -10,15 +21,19 @@ $errors = [
     'status' => '',
 ];
 
-$oldValue = [
-    'title' => '',
-    'institute' => '',
-    'address' => '',
-    'description' => '',
-    'start_date' => '',
-    'end_date' => '',
-    'status' => '',
-];
+if (isset($_GET['eid'])) {
+    $edit_id = $_GET['eid'];
+    $sql = "SELECT * FROM experience WHERE id =  $edit_id";
+    $result = $db->customQuery($sql);
+    $result = $result[0];
+    $oldValue['post'] =  $result->post;
+    $oldValue['company'] =  $result->company;
+    $oldValue['description'] =  $result->description;
+    $oldValue['address'] =  $result->address;
+    $oldValue['start_date'] =  $result->start_date;
+    $oldValue['end_date'] =  $result->end_date;
+    $oldValue['status'] =  $result->status;
+}
 
 if (!empty($_POST)) {
     foreach ($_POST as $key => $value) {
@@ -29,7 +44,7 @@ if (!empty($_POST)) {
         }
     }
     if ($_POST['status'] == '0') {
-        $_POST['end_date'] = 'Running';
+        $_POST['end_date'] = 'Present';
     } else {
         $start_date = new DateTime($_POST['start_date']);
         $end_date = new DateTime($_POST['end_date']);
@@ -40,51 +55,52 @@ if (!empty($_POST)) {
 
     if (!array_filter($errors)) {
         $data = $_POST;
-        $db->Insert('qualification', $data);
-        $_SESSION['success'] = "New Academic Journey has been added Successfully";
+        $update_id = $_GET['eid'];
+        $db->Update('experience', $data, 'id', $update_id);
+        $_SESSION['success'] = "1 Item have been update Successfully";
         redirect_back();
     }
 }
 ?>
+
+<!-- End Page Title -->
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Academic Degree</h1>
+        <h1>Experience</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?= url("admin") ?>">Home</a></li>
-                <li class="breadcrumb-item active">Qualification</li>
+                <li class="breadcrumb-item active">Update Experience</li>
             </ol>
         </nav>
     </div>
-
-    <!-- End Page Title -->
     <section class="section dashboard">
         <div class="row">
             <div class="card">
                 <div class="card-header ">
-                    <h5 class="card-title"> Add Degree</h5>
+                    <h5 class="card-title"> Update Experience</h5>
                     <?php messages(); ?>
                 </div>
                 <div class="card-body">
-                <form action="" method="post" id="degreeForm">
+                    <form action="" method="post" id="experienceform">
                         <div class="row gy-4">
                             <div class="col-md-6">
                                 <div class="form-group mb-2">
-                                    <label for="title">Academic Degree Title</label>
-                                    <input type="text" name="title" id="title" class="form-control" value="<?= $oldValue['title'] ?>">
-                                    <small class="text-danger"><?= $errors['title'] ?></small>
+                                    <label for="post">Designation:</label>
+                                    <input type="text" name="post" id="post" class="form-control" value="<?= $oldValue['post'] ?>">
+                                    <small class="text-danger"><?= $errors['post'] ?></small>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group mb-2">
-                                    <label for="institute">Institute</label>
-                                    <input type="text" name="institute" id="institute" class="form-control" value="<?= $oldValue['institute'] ?>">
-                                    <small class="text-danger"><?= $errors['institute'] ?></small>
+                                    <label for="company">company:</label>
+                                    <input type="text" name="company" id="company" class="form-control" value="<?= $oldValue['company'] ?>">
+                                    <small class="text-danger"><?= $errors['company'] ?></small>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group mb-2">
-                                    <label for="address">Institute Address</label>
+                                    <label for="address">Company Address</label>
                                     <input type="text" name="address" id="address" class="form-control" value="<?= $oldValue['address'] ?>">
                                     <small class="text-danger"><?= $errors['address'] ?></small>
                                 </div>
@@ -98,11 +114,11 @@ if (!empty($_POST)) {
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group mb-2">
-                                    Status: <br>
+                                    Current Job Status: <br>
                                     <input class="form-check-input" type="radio" name="status" id="completed" value="1" <?= ($oldValue['status'] == '1') ? 'checked' : '' ?>>
-                                    <label class="form-check-label" for="completed">Completed</label>
+                                    <label class="form-check-label" for="completed">Left Job</label>
                                     <input class="form-check-input" type="radio" name="status" id="running" value="0" <?= ($oldValue['status'] == '0') ? 'checked' : '' ?>>
-                                    <label class="form-check-label" for="running">Running</label>
+                                    <label class="form-check-label" for="running">Still Working Here</label>
                                 </div>
                             </div>
                             <div class="col-md-6" id="endDateGroup" style="display: none;">
@@ -115,7 +131,7 @@ if (!empty($_POST)) {
                             <div class="col-md-12">
                                 <div class="form-group mb-2">
                                     <label for="description">Description</label>
-                                    <textarea name="description"  class="form-control" rows="5" id="description"><?= $oldValue['description'] ?></textarea>
+                                    <textarea name="description" class="form-control" rows="5" id="description"><?= $oldValue['description'] ?></textarea>
                                     <small class="text-danger"><?= $errors['description'] ?></small>
                                 </div>
                             </div>
@@ -131,29 +147,26 @@ if (!empty($_POST)) {
 </main>
 <!-- End #main -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var status = "<?= $oldValue['status'] ?>";
-    var endDateGroup = document.getElementById('endDateGroup');
-    var endDateInput = document.getElementById('end_date');
-    if (status == '1') { // Completed
-        endDateGroup.style.display = 'block';
-    } else {
-        endDateGroup.style.display = 'none';
-        endDateInput.value = 'Running';
-    }
-    document.querySelectorAll('input[name="status"]').forEach(function(elem) {
-        elem.addEventListener('change', function() {
-            if (this.value == '1') { // Completed
-                endDateGroup.style.display = 'block';
-                endDateInput.value = "<?= $oldValue['end_date'] ?>";
-            } else {
-                endDateGroup.style.display = 'none';
-                endDateInput.value = 'Running';
-            }
+    document.addEventListener('DOMContentLoaded', function() {
+        var status = "<?= $oldValue['status'] ?>";
+        var endDateGroup = document.getElementById('endDateGroup');
+        var endDateInput = document.getElementById('end_date');
+        if (status == '1') { // Completed
+            endDateGroup.style.display = 'block';
+        } else {
+            endDateGroup.style.display = 'none';
+            endDateInput.value = 'Present';
+        }
+        document.querySelectorAll('input[name="status"]').forEach(function(elem) {
+            elem.addEventListener('change', function() {
+                if (this.value == '1') { // Completed
+                    endDateGroup.style.display = 'block';
+                    endDateInput.value = "<?= $oldValue['end_date'] ?>";
+                } else {
+                    endDateGroup.style.display = 'none';
+                    endDateInput.value = 'Present';
+                }
+            });
         });
     });
-});
-
-
-
 </script>

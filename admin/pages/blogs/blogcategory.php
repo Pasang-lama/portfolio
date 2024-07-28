@@ -17,18 +17,13 @@ if (isset($_POST['add_category'])) {
             $oldValue[$key] = $value;
         }
     }
-
     $catName = $_POST['cat_name'];
-
     $sql = "SELECT count(*) as total FROM category WHERE cat_name = '$catName'";
-
     $result = $db->customQuery($sql);
-
     $result = $result[0];
     if ($result->total > 0) {
         $errors['cat_name'] = "Category already exists";
     }
-
     if (!array_filter($errors)) {
         $data['cat_name'] = $_POST['cat_name'];
         $db->Insert('category', $data);
@@ -39,7 +34,6 @@ if (isset($_POST['add_category'])) {
 
 
 $editId = isset($_GET['eid']) ? $_GET['eid'] : '';
-
 if ($editId) {
     $sql = "SELECT * FROM category WHERE cid = $editId";
     $result = $db->customQuery($sql);

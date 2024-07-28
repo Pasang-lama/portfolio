@@ -30,6 +30,10 @@ $(document).ready(function () {
         filebrowserUploadUrl: "http://localhost/portfolio/ckeditor-upload.php",
         filebrowserUploadMethod: "form"
     });
+    CKEDITOR.replace('softskill', {
+        filebrowserUploadUrl: "http://localhost/portfolio/ckeditor-upload.php",
+        filebrowserUploadMethod: "form"
+    });
     CKEDITOR.replace('servicesDescription', {
         filebrowserUploadUrl: "http://localhost/portfolio/ckeditor-upload.php",
         filebrowserUploadMethod: "form"

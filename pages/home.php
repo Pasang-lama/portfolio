@@ -6,8 +6,8 @@
         </div>
     </div>
 </div>
-<script src="./public/js/jquery-3.6.0.min.js"></script>
-<script src=" ./public/js/typed.min.js"></script>
+<script src="<?= url("public/js/jquery-3.6.0.min.js")?>"></script>
+<script src="<?= url("public/js/typed.min.js")?>"></script>
 <script>
     var typing = new Typed(".typingText", {
         strings: [

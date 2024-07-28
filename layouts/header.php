@@ -23,7 +23,6 @@
     <link rel="shortcut icon" href="<?= url('public/css/public/images/Pasang_lama.jpg') ?>" type="image/x-icon">
     <!-- fancy-box  -->
     <link rel="stylesheet" href="<?= url('public/css/fancybox.css') ?>">
-
 </head>
 
 <body>
