@@ -29,22 +29,12 @@ if (isset($_POST['add_gallery_category'])) {
 
     if (!array_filter($errors)) {
         $data = $_POST;
-        if (!empty($_FILES['cover']['name'])) {
-            $ext = pathinfo($_FILES['cover']['name'], PATHINFO_EXTENSION);
-            $fileName = md5(microtime()) . ".$ext";
-            $uploadDir = public_path("images/gallery");
-            $uploadPath = "$uploadDir/$fileName";
-            if (!is_dir($uploadDir)) {
-                mkdir($uploadDir, 0755, true);
-            }
-            if (!move_uploaded_file($_FILES['cover']['tmp_name'], $uploadPath)) {
-                $errors['image'] = "Image Upload Failed";
-                redirect_back();
-            } else {
-                $data['cover'] = '/public/images/gallery/' . $fileName;
+        if (!empty($_FILES)) {
+            $image = fileUpload($_FILES, 'images/gallery');
+            if ($image['cover']) {
+                $data['cover'] = $image['cover'];
             }
         }
-
         $db->Insert('gallery', $data);
         $_SESSION['success'] = "Gallery Album Added Successfully";
         redirect_back();
@@ -57,6 +47,7 @@ if ($editId) {
     $result = $result[0];
     $oldValue['name'] = $result->name;
     $oldValue['cover'] = $result->cover;
+    $oldValue['slug'] = $result->slug;
 }
 if (isset($_POST['update_gallery_album'])) {
     unset($_POST['update_gallery_album']);
@@ -74,26 +65,17 @@ if (isset($_POST['update_gallery_album'])) {
     if ($result->total > 0) {
         $errors['name'] = "Gallery Album already exists";
     }
-    if (!empty($_FILES['cover']['name'])) {
-        $ext = pathinfo($_FILES['cover']['name'], PATHINFO_EXTENSION);
-        $fileName = md5(microtime()) . ".$ext";
-        $uploadDir = public_path("images/gallery");
-        $uploadPath = "$uploadDir/$fileName";
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
-        }
-        if (!move_uploaded_file($_FILES['cover']['tmp_name'], $uploadPath)) {
-            $errors['image'] = "Image Upload Failed";
-            redirect_back();
-        } else {
-            $data['cover'] = '/public/images/gallery/' . $fileName;
-        }
-    } else {
-        $data['cover'] = $oldValue["cover"];
-    }
+
     if (!array_filter($errors)) {
-        $data['name'] = $_POST['name'];
-        $data['slug'] = $_POST['slug'];
+        $data = $_POST;
+        if (!empty($_FILES)) {
+            $image = fileUpload($_FILES, 'images/gallery');
+            if ($image['cover']) {
+                $data['cover'] = $image['cover'];
+            }
+        } else {
+            $data['cover'] = $oldValue["cover"];
+        }
         $db->Update('gallery', $data, 'id', $editId);
         $_SESSION['success'] = "Gallery Album Updated Successfully";
         header('Location:' . url('admin/gallery/category'));
@@ -107,20 +89,13 @@ if (isset($_GET['did'])) {
     header('Location:' . url('admin/gallery/category'));
     exit();
 }
-// if (isset($_GET['mid'])) {
-//     $albumid = $_GET['mid'];
-//     $_SESSION['album_id'] = $albumid ;
-//     header('Location:' . url('admin/gallery/manage'));
-//     exit();
-// }
-// unset($_SESSION['album_id']);
 ?>
 <main id="main" class="main">
     <div class="pagetitle">
         <h1>Gallery</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?= url("admin") ?>">Home</a></li>
                 <li class="breadcrumb-item active">Gallery</li>
             </ol>
         </nav>
@@ -233,10 +208,10 @@ if (isset($_GET['did'])) {
                                     <td><img height="100px" src="<?= url($album->cover) ?>" alt="<?= $album->name ?>"></td>
                                     <td><?= $album->name ?></td>
                                     <td>
-                                        <a href="<?= url("admin/gallery/category?eid=".$album->id)?>" class="btn btn-primary">Edit</a>
-                                        <a href="<?= url("admin/gallery/add?aid=".$album->id)?>" class="btn btn-success">Add Image</a>
-                                        <a href="<?= url("admin/gallery/manage?mid=".$album->id) ?>" class="btn text-light btn-info">Manage</a>
-                                        <a href="<?= url("admin/gallery/category?did=". $album->id) ?>" class="btn btn-danger">Delete</a>
+                                        <a href="<?= url("admin/gallery/category?eid=" . $album->id) ?>" class="btn btn-primary">Edit</a>
+                                        <a href="<?= url("admin/gallery/add?aid=" . $album->id) ?>" class="btn btn-success">Add Image</a>
+                                        <a href="<?= url("admin/gallery/manage?mid=" . $album->id) ?>" class="btn text-light btn-info">Manage</a>
+                                        <a href="<?= url("admin/gallery/category?did=" . $album->id) ?>" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             <?php

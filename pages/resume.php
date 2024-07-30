@@ -49,8 +49,9 @@ $user = $userdata[0];
                         <?php
                         $technicalskills = $db->customQuery("SELECT * From technicalskill");
                         foreach ($technicalskills as $skill) {
-                        ?>
-                            <div class="progress-bar" data-percentage="80%">
+                        ?>  
+                                 
+                            <div class="progress-bar" data-percentage='<?=$skill->level?>%'>
                                 <div class="progress-title-holder">
                                     <h3 class="progress-title"><?=$skill->name?></h3>
                                     <span class="progress-number-wrapper">

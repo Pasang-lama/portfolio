@@ -1,28 +1,20 @@
 <?php
 $db = new Database();
-if (isset($_GET['eid'])) {
-    $editid = $_GET['eid'];
-    $_SESSION['edit_blogid'] =  $editid;
-    header('Location:' . url('admin/blogs/updateblog'));
-    exit();
-}
 if (isset($_GET['did'])) {
     $deleteId = $_GET['did'];
-    $db->Delete('blogs', 'nid', $deleteId);
-    $_SESSION['success'] = "Blog Deleted Successfully";
-    header('Location:' . url('admin/blogs/manageblog'));
+    $db->Delete('project', 'id', $deleteId);
+    $_SESSION['success'] = "Project Deleted Successfully";
+    header('Location:' . url('admin/project/manage'));
     exit();
 }
-unset($_SESSION['edit_blogid']);
-
 ?>
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Manage Blogs</h1>
+        <h1>Manage Project</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Blogs</li>
+            <li class="breadcrumb-item"><a href="<?=url("admin")?>">Home</a></li>
+                <li class="breadcrumb-item active">Projects</li>
             </ol>
         </nav>
     </div>
@@ -33,40 +25,39 @@ unset($_SESSION['edit_blogid']);
         <div class="row">
             <div class="card">
                 <div class="card-header ">
-                    <h5 class="card-title"> Blogs List</h5>
+                    <h5 class="card-title"> Project List</h5>
                 </div>
                 <?php messages() ?>
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>S.n</th>
+                                <th>S.N</th>
                                 <th>Thumbnail</th>
-                                <th>Blog Tittle</th>
+                                <th>Tittle</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            $blogs = $db->All('blogs');
+                            $projects = $db->All('project');
                             $i = 1;
-                            foreach ($blogs as $blog) {
+                            foreach ($projects as $project) {
                             ?>
                                 <tr>
                                     <td><?= $i++ ?></td>
-                                    <td><img src="<?= url($blog->image) ?>" height="100"></td>
-                                    <td><?= $blog->title ?></td>
-                                    <td><?= $blog -> status == 1 ? 'Published' : "Unpublished" ?></td>
+                                    <td><img src="<?= url($project->thumbnail) ?>" height="100"></td>
+                                    <td><?= $project->title ?></td>
+                                    <td><?= $project -> status?></td>
                                     <td>
-                                        <a href="<?= url("admin/blogs/manageblog") ?>?eid=<?= $blog->nid ?>" class="btn btn-primary">Edit</a>
-                                        <a href="<?= url("admin/blogs/manageblog") ?>?did=<?= $blog->nid ?>" class="btn btn-danger">Delete</a>
+                                        <a href="<?= url("admin/project/update") ?>?eid=<?= $project->id ?>" class="btn btn-primary">Edit</a>
+                                        <a href="<?= url("admin/project/manage") ?>?did=<?= $project->id ?>" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             <?php
                             }
                             ?>
-
                         </tbody>
                     </table>
 

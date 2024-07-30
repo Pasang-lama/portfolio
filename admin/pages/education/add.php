@@ -37,7 +37,6 @@ if (!empty($_POST)) {
             $errors['end_date'] = "End Date cannot be earlier than Start Date.";
         }
     }
-
     if (!array_filter($errors)) {
         $data = $_POST;
         $db->Insert('qualification', $data);

@@ -17,6 +17,10 @@ $(document).ready(function () {
         var value = $(this).val();
         $('#albumSlug').val(slugify(value));
     });
+    $('#projecttitle').keyup(function () {
+        var value = $(this).val();
+        $('#projectSlug').val(slugify(value));
+    });
 
     CKEDITOR.replace('blogsummary', {
         filebrowserUploadUrl: "http://localhost/portfolio/ckeditor-upload.php",
@@ -35,6 +39,10 @@ $(document).ready(function () {
         filebrowserUploadMethod: "form"
     });
     CKEDITOR.replace('servicesDescription', {
+        filebrowserUploadUrl: "http://localhost/portfolio/ckeditor-upload.php",
+        filebrowserUploadMethod: "form"
+    });
+    CKEDITOR.replace('projectDescription', {
         filebrowserUploadUrl: "http://localhost/portfolio/ckeditor-upload.php",
         filebrowserUploadMethod: "form"
     });

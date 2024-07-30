@@ -35,18 +35,40 @@
       </a>
       <ul id="blog-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-          <a href="<?= admin_url("blogs/blogcategory") ?>">
+          <a href="<?= admin_url("blogs/category") ?>">
             <i class="bi bi-circle"></i><span>Manage Blogs Category</span>
           </a>
         </li>
         <li>
-          <a href=" <?= admin_url("blogs/manageblog") ?>">
+          <a href=" <?= admin_url("blogs/manage") ?>">
             <i class="bi bi-circle"></i><span>Manage Blogs</span>
           </a>
         </li>
         <li>
-          <a href="<?= admin_url("blogs/addblog") ?>">
+          <a href="<?= admin_url("blogs/add") ?>">
             <i class="bi bi-circle"></i><span>Write Blogs</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#projects-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-code-slash"></i><span>Projects</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="projects-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="<?= admin_url("project/category") ?>">
+            <i class="bi bi-circle"></i><span>Manage Category</span>
+          </a>
+        </li>
+        <li>
+          <a href=" <?= admin_url("project/manage") ?>">
+            <i class="bi bi-circle"></i><span>Manage Project</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?= admin_url("project/add") ?>">
+            <i class="bi bi-circle"></i><span>Add New Project</span>
           </a>
         </li>
       </ul>
@@ -119,7 +141,6 @@
         </li>
       </ul>
     </li>
- 
     <li lass="nav-item">
       <a class="nav-link " href="<?= admin_url("client") ?>">
         <i class="bi bi-person-workspace"></i><span>Clients</span>
