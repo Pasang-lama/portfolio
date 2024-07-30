@@ -148,14 +148,14 @@ if (!empty($_POST)) {
                                     <label for="status">Project Status:</label>
                                     <select name="status" id="status" class="form-select" onchange="toggleFields(this.value)">
                                         <option value="" selected disabled>Select Project Status</option>
-                                        <option value="Planning">Planning</option>
-                                        <option value="Designing">Designing</option>
-                                        <option value="Review">Review</option>
-                                        <option value="Development">Development</option>
-                                        <option value="Testing">Testing</option>
-                                        <option value="On Hold">On Hold</option>
-                                        <option value="Cancelled">Cancelled</option>
-                                        <option value="Delivered">Delivered</option>
+                                        <option value="Planning" <?= $oldValue['status'] == 'Planning'? 'selected' : '' ?>>Planning</option>
+                                        <option value="Designing" <?= $oldValue['status'] == 'Designing'? 'selected' : '' ?>>Designing</option>
+                                        <option value="Review" <?= $oldValue['status'] == 'Review'? 'selected' : '' ?>>Review</option>
+                                        <option value="Development" <?= $oldValue['status'] == 'Development'? 'selected' : '' ?>>Development</option>
+                                        <option value="Testing" <?= $oldValue['status'] == 'Testing'? 'selected' : '' ?>>Testing</option>
+                                        <option value="On Hold" <?= $oldValue['status'] == 'On Hold'? 'selected' : '' ?>>On Hold</option>
+                                        <option value="Cancelled" <?= $oldValue['status'] == 'Cancelled'? 'selected' : '' ?>>Cancelled</option>
+                                        <option value="Delivered" <?= $oldValue['status'] == 'Delivered'? 'selected' : '' ?>>Delivered</option>
                                     </select>
                                 </div>
                             </div>

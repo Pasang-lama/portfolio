@@ -35,6 +35,7 @@ if (isset($_GET['did'])) {
                                 <th>S.N</th>
                                 <th>Thumbnail</th>
                                 <th>Tittle</th>
+                                <th>Project Status</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -50,6 +51,7 @@ if (isset($_GET['did'])) {
                                     <td><img src="<?= url($project->thumbnail) ?>" height="100"></td>
                                     <td><?= $project->title ?></td>
                                     <td><?= $project -> status?></td>
+                                    <td><?= $project -> frontend == '1'? "Published" : "Unpublished" ?></td>
                                     <td>
                                         <a href="<?= url("admin/project/update") ?>?eid=<?= $project->id ?>" class="btn btn-primary">Edit</a>
                                         <a href="<?= url("admin/project/manage") ?>?did=<?= $project->id ?>" class="btn btn-danger">Delete</a>

@@ -2,6 +2,37 @@
 $db = new Database();
 $contactinfo = $db->customQuery("SELECT phone, residence, map, email, linkedin, facebook, instagram, behance, twitter From users");
 $user = $contactinfo[0];
+$errors = [
+    'name' => '',
+    'phone' => '',
+    'email' => '',
+    'message' => '',
+];
+
+$oldValue = [
+    'name' => '',
+    'phone' => '',
+    'email' => '',
+    'message' => '',
+];
+
+if (!empty($_POST)) {
+    foreach ($_POST as $key => $value) {
+        if (empty($value) && $key != 'email') {
+            $errors[$key] = "This field is required";
+        } else {
+            $oldValue[$key] = $value;
+        }
+    }
+    if (!array_filter($errors)) {
+        $data = $_POST;
+        $db->Insert('contact', $data);
+        $_SESSION['success'] = "Contact message send Successfully";
+        redirect_back();
+    }
+}
+
+
 ?>
 
 
@@ -16,27 +47,34 @@ $user = $contactinfo[0];
                 <div class="sub-heading">
                     <h2 class="section-tittle">Write to us</h2>
                 </div>
-                <form class="contact-form" action="" autocomplete="off" method="POST">
+                <?= messages()?>
+                <form class="contact-form"  autocomplete="off" method="POST">
                     <div class="row gy-4">
                         <div class="col-lg-6">
                             <label for="contact_name" class="form-label">Full Name:</label>
-                            <input type="text" class="form-control" name="name" id="contact_name" placeholder="Full Name">
+                            <input type="text" class="form-control" name="name" id="contact_name" placeholder="Full Name" value="<?= $oldValue['name']?>">
+                            <small class="text-danger"><?= $errors['name'] ?></small>
+                            
                         </div>
                         <div class="col-lg-6">
                             <label for="contact_phone" class="form-label">Phone Number:</label>
-                            <input type="email" class="form-control" name="address" id="contact_phone" placeholder="Phone Number">
+                            <input type="text" class="form-control" name="phone" id="contact_phone" placeholder="Phone Number" value="<?= $oldValue['phone']?>">
+                            <small class="text-danger"><?= $errors['phone'] ?></small>
                         </div>
                         <div class="col-lg-12">
                             <label for="contact_email" class="form-label">Email Address:</label>
-                            <input type="text" class="form-control" name="email" id="contact_email" placeholder="Email Address">
+                            <input type="email" class="form-control" name="email" id="contact_email" placeholder="Email Address" value="<?= $oldValue['email']?>">
+                            <small class="text-danger"><?= $errors['email'] ?></small>
+
                         </div>
                         <div class="col-lg-12">
                             <label for="contact_message" class="form-label">Message:</label>
-                            <textarea class="form-control" id="contact_message" name="message" rows="3" placeholder="Write message..."></textarea>
+                            <textarea class="form-control" id="contact_message" name="message" rows="3" placeholder="Write message..."><?= $oldValue['message']?></textarea>
+                            <small class="text-danger"><?= $errors['message'] ?></small>
                         </div>
                     </div>
                     <div class="custom-buttons mt-4">
-                        <button type="submit"><i class="fa-solid pe-2 fa-paper-plane"></i> Send Message </button>
+                        <button  type="submit"><i class="fa-solid pe-2 fa-paper-plane"></i> Send Message </button>
                     </div>
                 </form>
             </div>

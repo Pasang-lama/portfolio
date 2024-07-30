@@ -29,22 +29,10 @@ if (isset($_POST['add_client'])) {
 
     if (!array_filter($errors)) {
         $data = $_POST;
-        if (!empty($_FILES['logo']['name'])) {
-            $ext = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
-            $fileName = md5(microtime()) . ".$ext";
-            $uploadDir = public_path("images/clients");
-            $uploadPath = "$uploadDir/$fileName";
-            if (!is_dir($uploadDir)) {
-                mkdir($uploadDir, 0755, true);
-            }
-            if (!move_uploaded_file($_FILES['logo']['tmp_name'], $uploadPath)) {
-                $errors['image'] = "Image Upload Failed";
-                redirect_back();
-            } else {
-                $data['logo'] = '/public/images/clients/' . $fileName;
-            }
+        $image= fileUpload($_FILES, 'images/clients');
+        if ($image['logo']) {
+            $data['logo']=$image['logo'];
         }
-
         $db->Insert('client', $data);
         $_SESSION['success'] = "Client Added Successfully";
         redirect_back();
@@ -78,21 +66,13 @@ if (isset($_POST['update_client'])) {
     $result = $result[0];
     if ($result->total > 0) {
         $errors['name'] = "Client already exists";
+        $oldValue['name'] = $result->name;
+        $oldValue['websiteurl'] = $result->websiteurl;
+        $oldValue['logo'] = $result->logo;
     }
-    if (!empty($_FILES['logo']['name'])) {
-        $ext = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
-        $fileName = md5(microtime()) . ".$ext";
-        $uploadDir = public_path("images/clients");
-        $uploadPath = "$uploadDir/$fileName";
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
-        }
-        if (!move_uploaded_file($_FILES['logo']['tmp_name'], $uploadPath)) {
-            $errors['image'] = "Image Upload Failed";
-            redirect_back();
-        } else {
-            $data['logo'] = '/public/images/clients/' . $fileName;
-        }
+    $image= fileUpload($_FILES, 'images/clients');
+    if ($image['logo']) {
+        $data['logo']=$image['logo'];
     }else{
         $data['logo'] = $oldValue["logo"];
     }
@@ -162,7 +142,6 @@ if (isset($_GET['did'])) {
                                         </label>
                                         <input type="file" id="logo" name="logo" class="form-control">
                                         <span class="text-danger mt-1 d-block"><?= $errors['logo'] ?></span>
-
                                     </div>
                                 </div>
                                 <div class="form-group mb-2">

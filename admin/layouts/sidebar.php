@@ -147,7 +147,7 @@
       </a>
     </li>
     <li lass="nav-item">
-      <a class="nav-link " href="<?= admin_url("client") ?>">
+      <a class="nav-link " href="<?= admin_url("message") ?>">
         <i class="bi bi-envelope-arrow-down-fill"></i><span>Contact message</span>
       </a>
     </li>
