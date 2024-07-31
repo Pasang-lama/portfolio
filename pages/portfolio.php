@@ -7,6 +7,7 @@ $projectsByCategory = [];
 foreach ($projects as $project) {
     $projectsByCategory[$project->category][] = $project;
 }
+
 ?>
 <div class="page-wrapper">
     <div class="container">

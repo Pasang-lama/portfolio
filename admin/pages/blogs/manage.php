@@ -3,14 +3,14 @@ $db = new Database();
 if (isset($_GET['eid'])) {
     $editid = $_GET['eid'];
     $_SESSION['edit_blogid'] =  $editid;
-    header('Location:' . url('admin/blogs/updateblog'));
+    header('Location:' . url('admin/blogs/manage'));
     exit();
 }
 if (isset($_GET['did'])) {
     $deleteId = $_GET['did'];
     $db->Delete('blogs', 'nid', $deleteId);
     $_SESSION['success'] = "Blog Deleted Successfully";
-    header('Location:' . url('admin/blogs/manageblog'));
+    header('Location:' . url('admin/blogs/manage'));
     exit();
 }
 unset($_SESSION['edit_blogid']);

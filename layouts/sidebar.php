@@ -1,10 +1,16 @@
+<?php
+$db = new Database();
+$userdata = $db->customQuery("SELECT name, profileimg, linkedin, facebook, instagram, behance, twitter From users");
+$user = $userdata[0];
+?>
+
 <div class="side-bar-wrapper" id="SideNav">
     <div class="side-bar">
         <div class="profile-figure">
             <figure>
-                <img src=" <?= ("public/images/Pasang_lama.jpg"); ?>" alt="Pasang Lama">
+                <img src=" <?= url($user->profileimg) ?>" alt="<?= $user->name ?>">
             </figure>
-            <div class="name">Pasang Lama</div>
+            <div class="name"><?= $user->name ?></div>
         </div>
         <div class="main-navigation-menu">
             <ul>
@@ -20,21 +26,38 @@
         <div class="side-bar-footer">
             <div class="social-media">
                 <ul>
-                    <li><a class="facebook" href="https://www.facebook.com/unbreakable.heart.7334/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li><a class="twitter" href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    </li>
-                    <li><a class="twitter" href="https://www.behance.net/pasanglama13" target="_blank"><i class="fa-brands fa-behance"></i></a>
-                    </li>
-                    <li><a class="instagram" href="https://www.instagram.com/pasang_shyangba_hyolmo/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li><a class="linkedin" href="https://www.linkedin.com/in/pasang-lama-429aa5208/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
+                <?php
+                        if (!empty($user->facebook)) {
+                        ?>
+                               <li><a class="facebook  icon-wrapper " href="<?= $user->facebook ?>" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
+                        <?php
+                        }
+                        if (!empty($user->twitter)) {
+                        ?>
+                               <li><a class="twitter icon-wrapper " href="<?= $user->twitter ?>" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> </li>
+                        <?php
+                        }
+                        if (!empty($user->linkedin)) {
+                        ?>
+                              <li> <a class="linkedin icon-wrapper  " href="<?= $user->linkedin ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a> </li>
+                        <?php
+                        }
+                        if (!empty($user->instagram)) {
+                        ?>
+                              <li> <a class="instagram icon-wrapper  " href="<?= $user->instagram ?>" target="_blank"><i class="fab fa-instagram"></i></i></a> </li>
+                        <?php
+                        }
+                        if (!empty($user->behance)) {
+                        ?>
+                              <li> <a class="icon-wrapper  " href="<?= $user->behance ?>" target="_blank"><i class="fa-brands fa-behance"></i></i></a> </li>
+                        <?php
+                        }
+                        ?>
                 </ul>
             </div>
 
             <div class="copy-right">
-                <p>2024 © Pasang Lama. All Right Reserved.</p>
+                <p>2024 © <?= $user->name ?>. All Right Reserved.</p>
             </div>
         </div>
     </div>

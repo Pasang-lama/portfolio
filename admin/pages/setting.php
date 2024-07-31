@@ -33,7 +33,9 @@ $oldValue = [
     'linkedin' => '',
     'behance' => '',
     'twitter' => '',
-    'status' => ''
+    'status' => '',
+    'cover' => ''
+
 ];
 
 
@@ -44,19 +46,13 @@ if (isset($_POST['update_profile'])) {
     } else {
         $oldValue["name"] = $_POST['name'];
     }
-    if (!empty($_FILES['profileimg']['name'])) {
-        $ext = pathinfo($_FILES['profileimg']['name'], PATHINFO_EXTENSION);
-        $fileName = md5(microtime()) . ".$ext";
-        $uploadDir = public_path("images/users");
-        $uploadPath = "$uploadDir/$fileName";
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0755, true);
+    if (!empty($_FILES)) {
+        $image = fileUpload($_FILES, 'images/users');
+        if ($image['profileimg']) {
+            $data['profileimg']=$image['profileimg'];
         }
-        if (!move_uploaded_file($_FILES['profileimg']['tmp_name'], $uploadPath)) {
-            $errors['profileimg'] = "Image Upload Failed";
-            redirect_back();
-        } else {
-            $data['profileimg'] = '/public/images/users/' . $fileName;
+        if ($image['cover']) {
+            $data['cover']=$image['cover'];
         }
     }
     
@@ -195,12 +191,20 @@ if (isset($_POST['updatesocialmedia'])) {
                                     <input type="file" name="profileimg" id="profileimg" class="form-control">
                                 </div>
                             </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-group">
+                                    <label for="cover">Cover Image</label>
+                                    <input type="file" name="cover" id="cover" class="form-control">
+                                </div>
+                            </div>
                             <div class="col-md-12 mb-2">
                                 <div class="form-group">
                                     <label for="map">Map</label>
                                     <textarea name="map" id="map" rows="5" class="form-control"><?= $user->map ?></textarea>
                                 </div>
                             </div>
+                     
+                        
                         </div>
 
                         <div class="form-group mb-2">
