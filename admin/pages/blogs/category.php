@@ -164,8 +164,8 @@ if(isset($_GET['did'])){
                                     <td><?= $i++ ?></td>
                                     <td><?= $category->cat_name ?></td>
                                     <td>
-                                        <a href="<?= url("admin/blogs/blogcategory") ?>?eid=<?= $category->cid ?>" class="btn btn-primary">Edit</a>
-                                        <a href="<?= url("admin/blogs/blogcategory") ?>?did=<?= $category->cid ?>" class="btn btn-danger">Delete</a>
+                                        <a href="<?= url("admin/blogs/category") ?>?eid=<?= $category->cid ?>" class="btn btn-primary">Edit</a>
+                                        <a href="<?= url("admin/blogs/category") ?>?did=<?= $category->cid ?>" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
 
