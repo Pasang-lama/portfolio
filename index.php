@@ -15,7 +15,7 @@ require_once("layouts/header.php");
 
 <div class="row gy-4 gx-0">
     <div class="col-lg-2">
-      <!-- <?php  require_once("layouts/sidebar.php"); ?> -->
+      <?php  require_once("layouts/sidebar.php"); ?>
     </div>
     <div class="col-lg-10  ">
         <?php
