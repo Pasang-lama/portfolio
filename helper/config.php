@@ -9,7 +9,7 @@ if (!function_exists("url")) {
         $host = $_SERVER['HTTP_HOST'];
         $project_name = $_ENV['App_NAME'];
         $url = trim($url, "/");
-        return "http://" . $host . "/" . $project_name . "/" . $url;
+        return "http://" . $host . "/" . $url;
     }
 }
 
@@ -27,7 +27,7 @@ if (!function_exists("public_path")) {
         $docRoot = $_SERVER['DOCUMENT_ROOT'];
         $project_name = $_ENV['App_NAME'];
         $path = trim($path, "/");
-        return $docRoot . "/" . $project_name . "/public/" . $path;
+        return $docRoot .  "/public/" . $path;
     }
 }
 
