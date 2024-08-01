@@ -137,7 +137,7 @@ if (!empty($_POST)) {
                             </div>
                         </div>
                         <div class="form-group mb-2">
-                            <button class="btn btn-primary" type="submit">Add Degree</button>
+                            <button class="btn btn-primary" type="submit">Update Experience</button>
                         </div>
                     </form>
                 </div>

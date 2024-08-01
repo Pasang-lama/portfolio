@@ -15,7 +15,7 @@ $user = $userdata[0];
             </div>
             <ul class="experience">
                 <?php
-                $experiences = $db->customQuery("SELECT * From experience");
+                $experiences = $db->customQuery("SELECT * From experience ORDER BY id DESC");
                 foreach ($experiences as $experience) {
                 ?>
                     <li>
@@ -28,14 +28,13 @@ $user = $userdata[0];
                             </p>
                         </div>
                         <div class="year">
-                            <time class="to"> <?= $experience->end_date ?> </time>
-                            <time class="from"> <?= $experience->start_date ?></time>
+                            <time class="to"><?=diffForHumans($experience->end_date,"M  Y");?></time>
+                            <time class="from"><?=diffForHumans($experience->start_date,"M  Y");?></time>
                         </div>
                     </li>
                 <?php
                 }
                 ?>
-
             </ul>
         </div>
 
@@ -50,7 +49,6 @@ $user = $userdata[0];
                         $technicalskills = $db->customQuery("SELECT * From technicalskill");
                         foreach ($technicalskills as $skill) {
                         ?>  
-                                 
                             <div class="progress-bar" data-percentage='<?=$skill->level?>%'>
                                 <div class="progress-title-holder">
                                     <h3 class="progress-title"><?=$skill->name?></h3>
@@ -89,7 +87,7 @@ $user = $userdata[0];
             </div>
             <ul class="experience">
                 <?php
-                $qualifications = $db->customQuery("SELECT * From qualification");
+                $qualifications = $db->customQuery("SELECT * From qualification ORDER BY id DESC");
                 foreach ($qualifications as $qualification) {
                 ?>
                     <li>
@@ -102,8 +100,8 @@ $user = $userdata[0];
                             </p>
                         </div>
                         <div class="year">
-                            <time class="to"> <?= $qualification->end_date ?> </time>
-                            <time class="from"> <?= $qualification->start_date ?></time>
+                            <time class="to"> <?=diffForHumans($qualification->end_date,"M  Y");?></time>
+                            <time class="from"> <?=diffForHumans($qualification->start_date,"M  Y");?></time>
                         </div>
                     </li>
                 <?php

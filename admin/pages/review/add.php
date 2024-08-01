@@ -68,7 +68,7 @@ if (!empty($_POST)) {
         <div class="row">
             <div class="card">
                 <div class="card-header ">
-                    <h5 class="card-title"> Wrte Blogs</h5>
+                    <h5 class="card-title"> Wrte Review</h5>
                     <?php messages(); ?>
                 </div>
                 <?php ?>
@@ -106,9 +106,9 @@ if (!empty($_POST)) {
                             </div>
                             <div class="col-md-6">
                             <div class="form-group mb-2">
-                            <label for="status">Blog Status:</label>
+                            <label for="status">Status:</label>
                             <select name="status" id="status" class="form-select">
-                                <option value="" selected disabled>Seelct Blog Status</option>
+                                <option value="" selected disabled>Select Status</option>
                                 <option value="1" >Published</option>
                                 <option value="0">Unpublished</option>
                             </select>

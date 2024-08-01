@@ -78,7 +78,7 @@ if (!empty($_POST)) {
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group mb-2">
-                                    <label for="company">company:</label>
+                                    <label for="company">Company:</label>
                                     <input type="text" name="company" id="company" class="form-control" value="<?= $oldValue['company'] ?>">
                                     <small class="text-danger"><?= $errors['company'] ?></small>
                                 </div>
@@ -122,7 +122,7 @@ if (!empty($_POST)) {
                             </div>
                         </div>
                         <div class="form-group mb-2">
-                            <button class="btn btn-primary" type="submit">Add Degree</button>
+                            <button class="btn btn-primary" type="submit">Add Experience</button>
                         </div>
                     </form>
                 </div>
