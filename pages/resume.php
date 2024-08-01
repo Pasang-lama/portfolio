@@ -15,7 +15,7 @@ $user = $userdata[0];
             </div>
             <ul class="experience">
                 <?php
-                $experiences = $db->customQuery("SELECT * From experience ORDER BY id DESC");
+                $experiences = $db->customQuery("SELECT * FROM experience ORDER BY id DESC");
                 foreach ($experiences as $experience) {
                 ?>
                     <li>
@@ -28,8 +28,8 @@ $user = $userdata[0];
                             </p>
                         </div>
                         <div class="year">
-                            <time class="to"><?=diffForHumans($experience->end_date,"M  Y");?></time>
-                            <time class="from"><?=diffForHumans($experience->start_date,"M  Y");?></time>
+                            <time class="to"><?=$experience->end_date?></time>
+                            <time class="from"><?=$experience->start_date?></time>
                         </div>
                     </li>
                 <?php
@@ -87,7 +87,7 @@ $user = $userdata[0];
             </div>
             <ul class="experience">
                 <?php
-                $qualifications = $db->customQuery("SELECT * From qualification ORDER BY id DESC");
+                $qualifications = $db->customQuery("SELECT * FROM qualification ORDER BY id DESC");
                 foreach ($qualifications as $qualification) {
                 ?>
                     <li>
