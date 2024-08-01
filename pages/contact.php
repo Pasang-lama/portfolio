@@ -26,9 +26,19 @@ if (!empty($_POST)) {
     }
     if (!array_filter($errors)) {
         $data = $_POST;
+        $email=$data['email'];
+        $phone=$data['phone'];
+        $message=$data['message'];
         $db->Insert('contact', $data);
-        $_SESSION['success'] = "Contact message send Successfully";
-        redirect_back();
+        if(custom_maiL($email,"some one ",$message)){
+            $_SESSION['success'] = "Contact message send Successfully";
+            redirect_back();
+        }else{
+            $_SESSION['error'] = "Contact message not been send";
+            redirect_back();
+        }
+      
+       
     }
 }
 
