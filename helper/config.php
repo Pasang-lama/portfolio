@@ -9,7 +9,7 @@ if (!function_exists("url")) {
         $host = $_SERVER['HTTP_HOST'];
         $project_name = $_ENV['App_NAME'];
         $url = trim($url, "/");
-        return "http://" . $host . "/" . $url;
+        return "https://" . $host . "/" . $url;
     }
 }
 
