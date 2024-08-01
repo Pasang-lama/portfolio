@@ -100,8 +100,8 @@ $user = $userdata[0];
                             </p>
                         </div>
                         <div class="year">
-                            <time class="to"> <?=diffForHumans($qualification->end_date,"M  Y");?></time>
-                            <time class="from"> <?=diffForHumans($qualification->start_date,"M  Y");?></time>
+                            <time class="to"> <?=$qualification->end_date?></time>
+                            <time class="from"> <?=$qualification->start_date?></time>
                         </div>
                     </li>
                 <?php
