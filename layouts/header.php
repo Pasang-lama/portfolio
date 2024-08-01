@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?= url('public/css/all.min.css') ?>">
 
     <!-- favicon  -->
-    <link rel="shortcut icon" href="<?= url('public/css/public/images/Pasang_lama.jpg') ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= url('public/images/Pasang_lama.jpg') ?>" type="image/x-icon">
     <!-- fancy-box  -->
     <link rel="stylesheet" href="<?= url('public/css/fancybox.css') ?>">
 </head>
