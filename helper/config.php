@@ -7,9 +7,14 @@ if (!function_exists("url")) {
     function url($url = "")
     {
         $host = $_SERVER['HTTP_HOST'];
-        $project_name = $_ENV['App_NAME'];
         $url = trim($url, "/");
-        return "https://" . $host . "/" . $url;
+        if($host == "localhost"){
+            $project_name = $_ENV['App_NAME'];
+            return "http://" . $host ."/". $project_name. "/" . $url;
+        }else{
+            return "https://" . $host . "/" . $url;
+        }
+      
     }
 }
 
@@ -24,10 +29,21 @@ if (!function_exists("admin_url")) {
 if (!function_exists("public_path")) {
     function public_path($path = "")
     {
+        
+        $host = $_SERVER['HTTP_HOST'];
+        $url = trim($path, "/");
+        if($host == "localhost"){
+            $project_name = $_ENV['App_NAME'];
+            return "http://" . $host ."/". $project_name. "/public" . $url;
+        }else{
+            return "https://" . $host . "/public/" . $url;
+        }
+      
+        /*
         $docRoot = $_SERVER['DOCUMENT_ROOT'];
         $project_name = $_ENV['App_NAME'];
         $path = trim($path, "/");
-        return $docRoot .  "/public/" . $path;
+        return $docRoot .  "/public/" . $path;*/
     }
 }
 
