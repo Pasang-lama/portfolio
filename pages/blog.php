@@ -24,7 +24,7 @@ JOIN category ON blogs.category_id=category.cid WHERE blogs.status = '1' ORDER B
                         <div class="blog-details">
                             <span><?= $blog->cat_name; ?> </span>
                             <h2 class="blog-tittle"><?= $blog->title ?></h2>
-                            <time><?=diffForHumans($blog->created_at,"M d Y");?><time>
+                            <time><?=diffForHumans($blog->created_at,"M j Y");?><time>
                         </div>
                     </a>
                 </div>

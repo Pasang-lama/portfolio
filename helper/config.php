@@ -29,7 +29,6 @@ if (!function_exists("admin_url")) {
 if (!function_exists("public_path")) {
     function public_path($path = "")
     {
-        
         $host = $_SERVER['HTTP_HOST'];
         $url = trim($path, "/");
         if($host == "localhost"){
@@ -44,6 +43,7 @@ if (!function_exists("public_path")) {
         $project_name = $_ENV['App_NAME'];
         $path = trim($path, "/");
         return $docRoot .  "/public/" . $path;*/
+
     }
 }
 
@@ -71,15 +71,28 @@ if (!function_exists("messages")) {
     }
 }
 
+// if (!function_exists("diffForHumans")) {
+//     function diffForHumans($date, $yourFormat = "Y m d")
+//     {
+       
+//         $datetime = new DateTime($date);
+//         return $datetime->format($yourFormat);
+//     }
+// }
+
 if (!function_exists("diffForHumans")) {
-    function diffForHumans($date, $yourFormat = "Y-m-d")
+    function diffForHumans($date, $yourFormat = "Y m d", $d = null)
     {
+        // If $d is provided, add it to the DateTime object
         $datetime = new DateTime($date);
+        
+        if ($d !== null) {
+            $datetime->modify($d);
+        }
+
         return $datetime->format($yourFormat);
     }
 }
-
-
 
 if (!function_exists("pr")) {
     function pr($data)
