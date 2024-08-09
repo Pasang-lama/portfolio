@@ -28,7 +28,7 @@ $user = $userdata[0];
                             </p>
                         </div>
                         <div class="year">
-                            <time class="to"><?=$experience->end_date != "Running"? diffForHumans($experience->end_date,"M Y") : $experience->end_date?></time>
+                            <time class="to"><?=$experience->end_date != "Present"? diffForHumans($experience->end_date,"M Y") : $experience->end_date?></time>
                             <time class="from"><?=diffForHumans($experience->start_date,"M  Y")?></time>
                         </div>
                     </li>
