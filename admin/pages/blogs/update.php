@@ -43,7 +43,7 @@ if (isset($_POST['updateblogs'])) {
         }
     }
     if (!empty($_FILES)) {
-        $image = fileUpload($_FILES, 'images/blogsimages');
+        $image = fileUpload($_FILES, 'images/blog');
         if ($image['image']) {
             $data['image'] = $image['image'];
         }

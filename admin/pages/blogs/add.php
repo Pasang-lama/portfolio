@@ -28,7 +28,7 @@ if (!empty($_POST)) {
     if (!array_filter($errors)) {
         $data = $_POST;
         if (!empty($_FILES)) {
-            $image = fileUpload($_FILES, 'images/blogsimages');
+            $image = fileUpload($_FILES, 'images/blog');
             if ($image['image']) {
                 $data['image'] = $image['image'];
             }

@@ -62,7 +62,7 @@ if(isset($_POST['update_category'])){
         $data['cat_name'] = $_POST['cat_name'];
         $db->Update('category',$data,'cid',$editId);
         $_SESSION['success'] = "Category Updated Successfully";
-        header('Location:'.url('admin/blogs/blogcategory'));
+        header('Location:'.url('admin/blogs/category'));
         exit();
     }
 }
@@ -71,7 +71,7 @@ if(isset($_GET['did'])){
     $deleteId = $_GET['did'];
     $db->Delete('category','cid',$deleteId);
     $_SESSION['success'] = "Category Deleted Successfully";
-    header('Location:'.url('admin/blogs/blogcategory'));
+    header('Location:'.url('admin/blogs/category'));
     exit();
 }
 

@@ -33,7 +33,7 @@ if (!function_exists("public_path")) {
         $url = trim($path, "/");
         if($host == "localhost"){
             $project_name = $_ENV['App_NAME'];
-            return "http://" . $host ."/". $project_name. "/public" . $url;
+            return "http://" . $host ."/". $project_name. "/public/" . $url;
         }else{
             return "https://" . $host . "/public/" . $url;
         }
@@ -118,7 +118,7 @@ if (!function_exists("dd")) {
 if (!function_exists("fileUpload")) {
     function fileUpload($files, $location = "images")
     {
-        $uploadDir = public_path($location);
+        $uploadDir = __DIR__.'/../public/'.$location;
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
         }
@@ -127,7 +127,6 @@ if (!function_exists("fileUpload")) {
         if (is_array($files) && isset($files['name'])) {
             $files = [$files];
         }
-
         foreach ($files as $key => $file) {
             $fileName = $file['name'];
             $tmpName = $file['tmp_name'];
