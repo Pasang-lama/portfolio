@@ -42,16 +42,17 @@ if (isset($_POST['updateblogs'])) {
             $oldValue[$key] = $value;
         }
     }
-    if (!empty($_FILES)) {
-        $image = fileUpload($_FILES, 'images/blog');
-        if ($image['image']) {
-            $data['image'] = $image['image'];
-        }
-    } else {
-        $data['image'] = $oldValue['image'];
-    }
+
     if (!array_filter($errors)) {
         $data = $_POST;
+        if (!empty($_FILES)) {
+            $image = fileUpload($_FILES, 'images/blog');
+            if ($image['image']) {
+                $data['image'] = $image['image'];
+            }
+        } else {
+            $data['image'] = $oldValue['image'];
+        }
         $editid = $_GET["eid"];
         $db->Update('blogs', $data, 'nid', $editid);
         $_SESSION['success'] = "blogs Updated Successfully";
@@ -121,7 +122,7 @@ if (isset($_POST['updateblogs'])) {
                             </div>
                         </div>
                         <div class="form-group mt-2">
-                            <button name="updateblogs" class="btn btn-primary">Add News</button>
+                            <button name="updateblogs" class="btn btn-primary">Update Blog</button>
                         </div>
                     </form>
                 </div>
